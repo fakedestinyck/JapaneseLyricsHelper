@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633E30771F9E9A8000644614 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E30761F9E9A8000644614 /* SongTableViewCell.swift */; };
+		633E307B1F9EA5E200644614 /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E307A1F9EA5E200644614 /* SongTableViewController.swift */; };
+		633E307D1F9EA78E00644614 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E307C1F9EA78E00644614 /* Song.swift */; };
 		63985B831F9DC00C009B4B17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63985B821F9DC00C009B4B17 /* AppDelegate.swift */; };
 		63985B851F9DC00C009B4B17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63985B841F9DC00C009B4B17 /* ViewController.swift */; };
 		63985B881F9DC00C009B4B17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63985B861F9DC00C009B4B17 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		633E30761F9E9A8000644614 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		633E307A1F9EA5E200644614 /* SongTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
+		633E307C1F9EA78E00644614 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		63985B7F1F9DC00C009B4B17 /* JapaneseLyricsHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseLyricsHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63985B821F9DC00C009B4B17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63985B841F9DC00C009B4B17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,8 +28,8 @@
 		63985B891F9DC00C009B4B17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63985B8C1F9DC00C009B4B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63985B8E1F9DC00C009B4B17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63985B941F9DC07C009B4B17 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		63985B951F9DC07C009B4B17 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		63985B961F9DC146009B4B17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		63985B971F9DC146009B4B17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 		63985B811F9DC00C009B4B17 /* JapaneseLyricsHelper */ = {
 			isa = PBXGroup;
 			children = (
+				633E30761F9E9A8000644614 /* SongTableViewCell.swift */,
+				633E307A1F9EA5E200644614 /* SongTableViewController.swift */,
+				633E307C1F9EA78E00644614 /* Song.swift */,
 				63985B821F9DC00C009B4B17 /* AppDelegate.swift */,
 				63985B841F9DC00C009B4B17 /* ViewController.swift */,
 				63985B861F9DC00C009B4B17 /* Main.storyboard */,
@@ -136,8 +145,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633E30771F9E9A8000644614 /* SongTableViewCell.swift in Sources */,
 				63985B851F9DC00C009B4B17 /* ViewController.swift in Sources */,
+				633E307B1F9EA5E200644614 /* SongTableViewController.swift in Sources */,
 				63985B831F9DC00C009B4B17 /* AppDelegate.swift in Sources */,
+				633E307D1F9EA78E00644614 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +160,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				63985B871F9DC00C009B4B17 /* Base */,
-				63985B941F9DC07C009B4B17 /* zh-Hans */,
+				63985B961F9DC146009B4B17 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -157,7 +169,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				63985B8C1F9DC00C009B4B17 /* Base */,
-				63985B951F9DC07C009B4B17 /* zh-Hans */,
+				63985B971F9DC146009B4B17 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
