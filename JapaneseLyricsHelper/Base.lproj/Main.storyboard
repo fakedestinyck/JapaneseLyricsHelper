@@ -39,7 +39,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play" translatesAutoresizingMaskIntoConstraints="NO" id="xBq-9n-5RW">
+                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play" translatesAutoresizingMaskIntoConstraints="NO" id="xBq-9n-5RW">
                                             <rect key="frame" x="307" y="17.333333333333332" width="50" height="50.333333333333343"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="Aas-hd-Gan"/>
@@ -62,6 +62,7 @@
                                     <outlet property="languagesLabel" destination="WUa-DK-Xcc" id="sg7-GP-SXq"/>
                                     <outlet property="playButtonImage" destination="xBq-9n-5RW" id="D4A-Dd-kSU"/>
                                     <outlet property="songTitleLabel" destination="Xrs-h9-qeK" id="xeU-Qz-Y5Y"/>
+                                    <segue destination="yLn-kX-tCb" kind="show" identifier="ShowSong" id="ni6-I6-deY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -82,10 +83,25 @@
             </objects>
             <point key="canvasLocation" x="-274.5" y="-100"/>
         </scene>
-        <!--View Controller-->
+        <!--Song Lyrics View Controller-->
+        <scene sceneID="ylq-5q-aUk">
+            <objects>
+                <viewController id="yLn-kX-tCb" customClass="SongLyricsViewController" customModule="JapaneseLyricsHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3K2-d2-LnI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="gh5-KF-BnS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZhQ-3b-7yl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="-83"/>
+        </scene>
+        <!--Settings-->
         <scene sceneID="Qk7-w4-kWx">
             <objects>
-                <viewController id="OXo-hY-Oct" sceneMemberID="viewController">
+                <viewController title="Settings" id="OXo-hY-Oct" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Due-BX-C0q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTG-0k-yqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="615" y="-100"/>
+            <point key="canvasLocation" x="516" y="-745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pae-LT-yNK">

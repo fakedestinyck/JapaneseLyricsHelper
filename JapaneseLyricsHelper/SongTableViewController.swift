@@ -6,29 +6,67 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SongTableViewController: UITableViewController {
     
     //MARK: Properties
     
     var songs = [Song]()
+    private var audioPlayer: AVAudioPlayer?
+    private var lastPlayedName = ""
+    private var lastPlayedButton: UIImageView?
     
     //MARK: Private Methods
     
     private func loadSampleSongs() {
-        guard let song1 = Song(title: "淡い花", languages: ["jp"], lyrics: nil) else {
+        guard let song1 = Song(name:"awaihana", title: "淡い花", languages: ["jp"], lyrics: nil) else {
             fatalError("Unable to instantiate meal1")
         }
         
-        guard let song2 = Song(title: "Childish Flower", languages: ["jp"], lyrics: nil) else {
+        guard let song2 = Song(name:"childish_flower", title: "Childish Flower", languages: ["jp"], lyrics: nil) else {
             fatalError("Unable to instantiate meal1")
         }
         
-        guard let song3 = Song(title: "前々前世", languages: ["jp"], lyrics: nil) else {
+        guard let song3 = Song(name:"zenzenzensei", title: "前々前世", languages: ["jp"], lyrics: nil) else {
             fatalError("Unable to instantiate meal1")
         }
         
         songs += [song1, song2, song3]
+    }
+    
+    @objc func playButtonTouched(sender:UITapGestureRecognizer) {
+        let songIndex = sender.view?.tag
+        let songName = songs[songIndex!].name
+        let image = sender.view as! UIImageView
+        
+        if image.image == #imageLiteral(resourceName: "Play") {
+            image.image = #imageLiteral(resourceName: "PlayTouched")
+            
+            // if last played mp3 is this song, continue
+            if lastPlayedName == songName {
+                audioPlayer!.play()
+            } else {
+                //prepare mp3
+                let music = URL(fileURLWithPath: Bundle.main.path(forResource: songName, ofType: "mp3", inDirectory: "mp3")!)
+                
+                try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                try! AVAudioSession.sharedInstance().setActive(true)
+                
+                try! audioPlayer = AVAudioPlayer(contentsOf: music)
+                audioPlayer!.prepareToPlay()
+                lastPlayedName = songName
+                if lastPlayedButton != nil {
+                    lastPlayedButton?.image = #imageLiteral(resourceName: "Play")
+                }
+                lastPlayedButton = image
+                audioPlayer!.play()
+            }
+        } else {
+            image.image = #imageLiteral(resourceName: "Play")
+            audioPlayer!.pause()
+        }
+        
     }
 
     override func viewDidLoad() {
@@ -74,6 +112,11 @@ class SongTableViewController: UITableViewController {
         cell.songTitleLabel.text = song.title
         cell.languagesLabel.text = song.languages[0]
         cell.playButtonImage.image = #imageLiteral(resourceName: "Play")
+        cell.playButtonImage.tag = indexPath.row
+        
+        let tapPlayGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SongTableViewController.playButtonTouched))
+        
+        cell.playButtonImage.addGestureRecognizer(tapPlayGesture)
         
         return cell
     }
@@ -114,14 +157,37 @@ class SongTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+            
+        case "Settings":
+            print("Settings")
+            
+        case "ShowSong":
+            guard let songLyricsViewController = segue.destination as? SongLyricsViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedSongCell = sender as? SongTableViewCell else {
+                fatalError("Unexpected sender: \(sender ?? "Unknown")")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedSongCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let selectedSong = songs[indexPath.row]
+            songLyricsViewController.song = selectedSong
+            
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier ?? "Unknown")")
+        }
     }
-    */
 
 }

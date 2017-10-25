@@ -11,6 +11,7 @@ class Song {
     
     //MARK: Properties
     
+    var name: String
     var title: String
     var languages: [String]
     var lyrics: [String]?
@@ -18,12 +19,13 @@ class Song {
     
     //MARK: Initialization
     
-    init?(title: String, languages: [String], lyrics: [String]?) {
+    init?(name: String, title: String, languages: [String], lyrics: [String]?) {
+        self.name = name
         self.title = title
         self.languages = languages
         self.lyrics = lyrics
         
-        if title.isEmpty || languages.isEmpty {
+        if name.isEmpty || title.isEmpty || languages.isEmpty {
             return nil
         }
     }

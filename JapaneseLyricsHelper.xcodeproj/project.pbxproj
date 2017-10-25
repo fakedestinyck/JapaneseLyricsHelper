@@ -10,17 +10,25 @@
 		633E30771F9E9A8000644614 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E30761F9E9A8000644614 /* SongTableViewCell.swift */; };
 		633E307B1F9EA5E200644614 /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E307A1F9EA5E200644614 /* SongTableViewController.swift */; };
 		633E307D1F9EA78E00644614 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E307C1F9EA78E00644614 /* Song.swift */; };
+		633E307F1F9EF87E00644614 /* lyrics in Resources */ = {isa = PBXBuildFile; fileRef = 633E307E1F9EF87E00644614 /* lyrics */; };
+		633E30811F9EF88400644614 /* mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 633E30801F9EF88400644614 /* mp3 */; };
+		633E30841F9F23E900644614 /* SongLyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E30831F9F23E900644614 /* SongLyricsViewController.swift */; };
 		63985B831F9DC00C009B4B17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63985B821F9DC00C009B4B17 /* AppDelegate.swift */; };
 		63985B851F9DC00C009B4B17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63985B841F9DC00C009B4B17 /* ViewController.swift */; };
 		63985B881F9DC00C009B4B17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63985B861F9DC00C009B4B17 /* Main.storyboard */; };
 		63985B8A1F9DC00C009B4B17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63985B891F9DC00C009B4B17 /* Assets.xcassets */; };
 		63985B8D1F9DC00C009B4B17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63985B8B1F9DC00C009B4B17 /* LaunchScreen.storyboard */; };
+		8508D6A3F76CE3236560FC51 /* Pods_JapaneseLyricsHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78301D3F5A776D81138B3D0 /* Pods_JapaneseLyricsHelper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F557865B008199E0FFE989E /* Pods-JapaneseLyricsHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapaneseLyricsHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-JapaneseLyricsHelper/Pods-JapaneseLyricsHelper.release.xcconfig"; sourceTree = "<group>"; };
 		633E30761F9E9A8000644614 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		633E307A1F9EA5E200644614 /* SongTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
 		633E307C1F9EA78E00644614 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		633E307E1F9EF87E00644614 /* lyrics */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lyrics; sourceTree = "<group>"; };
+		633E30801F9EF88400644614 /* mp3 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mp3; sourceTree = "<group>"; };
+		633E30831F9F23E900644614 /* SongLyricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongLyricsViewController.swift; sourceTree = "<group>"; };
 		63985B7F1F9DC00C009B4B17 /* JapaneseLyricsHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseLyricsHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63985B821F9DC00C009B4B17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63985B841F9DC00C009B4B17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +38,8 @@
 		63985B8E1F9DC00C009B4B17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63985B961F9DC146009B4B17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		63985B971F9DC146009B4B17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DF22D4258B82B0AF2EDC161F /* Pods-JapaneseLyricsHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapaneseLyricsHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JapaneseLyricsHelper/Pods-JapaneseLyricsHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		F78301D3F5A776D81138B3D0 /* Pods_JapaneseLyricsHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JapaneseLyricsHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8508D6A3F76CE3236560FC51 /* Pods_JapaneseLyricsHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +59,8 @@
 			children = (
 				63985B811F9DC00C009B4B17 /* JapaneseLyricsHelper */,
 				63985B801F9DC00C009B4B17 /* Products */,
+				A1B624AC690AA39423D96AEB /* Pods */,
+				FD2D3FCC5727AF776175B7F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,9 +75,12 @@
 		63985B811F9DC00C009B4B17 /* JapaneseLyricsHelper */ = {
 			isa = PBXGroup;
 			children = (
+				633E30801F9EF88400644614 /* mp3 */,
+				633E307E1F9EF87E00644614 /* lyrics */,
 				633E30761F9E9A8000644614 /* SongTableViewCell.swift */,
 				633E307A1F9EA5E200644614 /* SongTableViewController.swift */,
 				633E307C1F9EA78E00644614 /* Song.swift */,
+				633E30831F9F23E900644614 /* SongLyricsViewController.swift */,
 				63985B821F9DC00C009B4B17 /* AppDelegate.swift */,
 				63985B841F9DC00C009B4B17 /* ViewController.swift */,
 				63985B861F9DC00C009B4B17 /* Main.storyboard */,
@@ -75,6 +91,23 @@
 			path = JapaneseLyricsHelper;
 			sourceTree = "<group>";
 		};
+		A1B624AC690AA39423D96AEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF22D4258B82B0AF2EDC161F /* Pods-JapaneseLyricsHelper.debug.xcconfig */,
+				5F557865B008199E0FFE989E /* Pods-JapaneseLyricsHelper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FD2D3FCC5727AF776175B7F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F78301D3F5A776D81138B3D0 /* Pods_JapaneseLyricsHelper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63985B911F9DC00C009B4B17 /* Build configuration list for PBXNativeTarget "JapaneseLyricsHelper" */;
 			buildPhases = (
+				1CDB33B1C68872346A55346A /* [CP] Check Pods Manifest.lock */,
 				63985B7B1F9DC00C009B4B17 /* Sources */,
 				63985B7C1F9DC00C009B4B17 /* Frameworks */,
 				63985B7D1F9DC00C009B4B17 /* Resources */,
+				2278B8466AF087CD4DB2C5C3 /* [CP] Embed Pods Frameworks */,
+				16397DCBEE3EB7C68DDC3DFA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -106,7 +142,7 @@
 				TargetAttributes = {
 					63985B7E1F9DC00C009B4B17 = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -132,6 +168,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633E30811F9EF88400644614 /* mp3 in Resources */,
+				633E307F1F9EF87E00644614 /* lyrics in Resources */,
 				63985B8D1F9DC00C009B4B17 /* LaunchScreen.storyboard in Resources */,
 				63985B8A1F9DC00C009B4B17 /* Assets.xcassets in Resources */,
 				63985B881F9DC00C009B4B17 /* Main.storyboard in Resources */,
@@ -140,12 +178,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16397DCBEE3EB7C68DDC3DFA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JapaneseLyricsHelper/Pods-JapaneseLyricsHelper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CDB33B1C68872346A55346A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2278B8466AF087CD4DB2C5C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JapaneseLyricsHelper/Pods-JapaneseLyricsHelper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		63985B7B1F9DC00C009B4B17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				633E30771F9E9A8000644614 /* SongTableViewCell.swift in Sources */,
+				633E30841F9F23E900644614 /* SongLyricsViewController.swift in Sources */,
 				63985B851F9DC00C009B4B17 /* ViewController.swift in Sources */,
 				633E307B1F9EA5E200644614 /* SongTableViewController.swift in Sources */,
 				63985B831F9DC00C009B4B17 /* AppDelegate.swift in Sources */,
@@ -288,15 +375,19 @@
 		};
 		63985B921F9DC00C009B4B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF22D4258B82B0AF2EDC161F /* Pods-JapaneseLyricsHelper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3CMCS2KX8Z;
 				INFOPLIST_FILE = JapaneseLyricsHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = casparQian.JapaneseLyricsHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "991a2920-5c30-43f1-8761-7af67c492487";
+				PROVISIONING_PROFILE_SPECIFIER = Wild_JpLyricsHelper;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -304,15 +395,19 @@
 		};
 		63985B931F9DC00C009B4B17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F557865B008199E0FFE989E /* Pods-JapaneseLyricsHelper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3CMCS2KX8Z;
 				INFOPLIST_FILE = JapaneseLyricsHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = casparQian.JapaneseLyricsHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "991a2920-5c30-43f1-8761-7af67c492487";
+				PROVISIONING_PROFILE_SPECIFIER = Wild_JpLyricsHelper;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
