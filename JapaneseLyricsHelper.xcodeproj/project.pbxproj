@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6327BA501FA0479A00ECEFD9 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327BA4F1FA0479A00ECEFD9 /* SwiftSpinner.swift */; };
 		633E30771F9E9A8000644614 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E30761F9E9A8000644614 /* SongTableViewCell.swift */; };
 		633E307B1F9EA5E200644614 /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E307A1F9EA5E200644614 /* SongTableViewController.swift */; };
 		633E307D1F9EA78E00644614 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E307C1F9EA78E00644614 /* Song.swift */; };
-		633E307F1F9EF87E00644614 /* lyrics in Resources */ = {isa = PBXBuildFile; fileRef = 633E307E1F9EF87E00644614 /* lyrics */; };
-		633E30811F9EF88400644614 /* mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 633E30801F9EF88400644614 /* mp3 */; };
 		633E30841F9F23E900644614 /* SongLyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E30831F9F23E900644614 /* SongLyricsViewController.swift */; };
 		63985B831F9DC00C009B4B17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63985B821F9DC00C009B4B17 /* AppDelegate.swift */; };
 		63985B851F9DC00C009B4B17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63985B841F9DC00C009B4B17 /* ViewController.swift */; };
 		63985B881F9DC00C009B4B17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63985B861F9DC00C009B4B17 /* Main.storyboard */; };
 		63985B8A1F9DC00C009B4B17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63985B891F9DC00C009B4B17 /* Assets.xcassets */; };
 		63985B8D1F9DC00C009B4B17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63985B8B1F9DC00C009B4B17 /* LaunchScreen.storyboard */; };
+		639EE0EB1FA0F5FC00C95667 /* PgyUpdate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639EE0EA1FA0F5FC00C95667 /* PgyUpdate.framework */; };
+		639EE0F21FA118F900C95667 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639EE0F11FA118F900C95667 /* SettingsViewController.swift */; };
 		8508D6A3F76CE3236560FC51 /* Pods_JapaneseLyricsHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78301D3F5A776D81138B3D0 /* Pods_JapaneseLyricsHelper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F557865B008199E0FFE989E /* Pods-JapaneseLyricsHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapaneseLyricsHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-JapaneseLyricsHelper/Pods-JapaneseLyricsHelper.release.xcconfig"; sourceTree = "<group>"; };
+		6327BA4F1FA0479A00ECEFD9 /* SwiftSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 		633E30761F9E9A8000644614 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		633E307A1F9EA5E200644614 /* SongTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
 		633E307C1F9EA78E00644614 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		633E307E1F9EF87E00644614 /* lyrics */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lyrics; sourceTree = "<group>"; };
-		633E30801F9EF88400644614 /* mp3 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mp3; sourceTree = "<group>"; };
 		633E30831F9F23E900644614 /* SongLyricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongLyricsViewController.swift; sourceTree = "<group>"; };
 		63985B7F1F9DC00C009B4B17 /* JapaneseLyricsHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseLyricsHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63985B821F9DC00C009B4B17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +38,9 @@
 		63985B8E1F9DC00C009B4B17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63985B961F9DC146009B4B17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		63985B971F9DC146009B4B17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		639EE0EA1FA0F5FC00C95667 /* PgyUpdate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PgyUpdate.framework; sourceTree = "<group>"; };
+		639EE0EC1FA0F67700C95667 /* JapaneseLyricsHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JapaneseLyricsHelper-Bridging-Header.h"; sourceTree = "<group>"; };
+		639EE0F11FA118F900C95667 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DF22D4258B82B0AF2EDC161F /* Pods-JapaneseLyricsHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapaneseLyricsHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JapaneseLyricsHelper/Pods-JapaneseLyricsHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		F78301D3F5A776D81138B3D0 /* Pods_JapaneseLyricsHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JapaneseLyricsHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				639EE0EB1FA0F5FC00C95667 /* PgyUpdate.framework in Frameworks */,
 				8508D6A3F76CE3236560FC51 /* Pods_JapaneseLyricsHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,18 +79,20 @@
 		63985B811F9DC00C009B4B17 /* JapaneseLyricsHelper */ = {
 			isa = PBXGroup;
 			children = (
-				633E30801F9EF88400644614 /* mp3 */,
-				633E307E1F9EF87E00644614 /* lyrics */,
+				639EE0EA1FA0F5FC00C95667 /* PgyUpdate.framework */,
 				633E30761F9E9A8000644614 /* SongTableViewCell.swift */,
 				633E307A1F9EA5E200644614 /* SongTableViewController.swift */,
+				6327BA4F1FA0479A00ECEFD9 /* SwiftSpinner.swift */,
 				633E307C1F9EA78E00644614 /* Song.swift */,
 				633E30831F9F23E900644614 /* SongLyricsViewController.swift */,
 				63985B821F9DC00C009B4B17 /* AppDelegate.swift */,
 				63985B841F9DC00C009B4B17 /* ViewController.swift */,
 				63985B861F9DC00C009B4B17 /* Main.storyboard */,
+				639EE0F11FA118F900C95667 /* SettingsViewController.swift */,
 				63985B891F9DC00C009B4B17 /* Assets.xcassets */,
 				63985B8B1F9DC00C009B4B17 /* LaunchScreen.storyboard */,
 				63985B8E1F9DC00C009B4B17 /* Info.plist */,
+				639EE0EC1FA0F67700C95667 /* JapaneseLyricsHelper-Bridging-Header.h */,
 			);
 			path = JapaneseLyricsHelper;
 			sourceTree = "<group>";
@@ -142,6 +148,7 @@
 				TargetAttributes = {
 					63985B7E1F9DC00C009B4B17 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -168,8 +175,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				633E30811F9EF88400644614 /* mp3 in Resources */,
-				633E307F1F9EF87E00644614 /* lyrics in Resources */,
 				63985B8D1F9DC00C009B4B17 /* LaunchScreen.storyboard in Resources */,
 				63985B8A1F9DC00C009B4B17 /* Assets.xcassets in Resources */,
 				63985B881F9DC00C009B4B17 /* Main.storyboard in Resources */,
@@ -234,9 +239,11 @@
 				633E30771F9E9A8000644614 /* SongTableViewCell.swift in Sources */,
 				633E30841F9F23E900644614 /* SongLyricsViewController.swift in Sources */,
 				63985B851F9DC00C009B4B17 /* ViewController.swift in Sources */,
+				6327BA501FA0479A00ECEFD9 /* SwiftSpinner.swift in Sources */,
 				633E307B1F9EA5E200644614 /* SongTableViewController.swift in Sources */,
 				63985B831F9DC00C009B4B17 /* AppDelegate.swift in Sources */,
 				633E307D1F9EA78E00644614 /* Song.swift in Sources */,
+				639EE0F21FA118F900C95667 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,9 +385,14 @@
 			baseConfigurationReference = DF22D4258B82B0AF2EDC161F /* Pods-JapaneseLyricsHelper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3CMCS2KX8Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JapaneseLyricsHelper",
+				);
 				INFOPLIST_FILE = JapaneseLyricsHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -388,6 +400,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "991a2920-5c30-43f1-8761-7af67c492487";
 				PROVISIONING_PROFILE_SPECIFIER = Wild_JpLyricsHelper;
+				SWIFT_OBJC_BRIDGING_HEADER = "JapaneseLyricsHelper/JapaneseLyricsHelper-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -398,9 +412,14 @@
 			baseConfigurationReference = 5F557865B008199E0FFE989E /* Pods-JapaneseLyricsHelper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3CMCS2KX8Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JapaneseLyricsHelper",
+				);
 				INFOPLIST_FILE = JapaneseLyricsHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -408,6 +427,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "991a2920-5c30-43f1-8761-7af67c492487";
 				PROVISIONING_PROFILE_SPECIFIER = Wild_JpLyricsHelper;
+				SWIFT_OBJC_BRIDGING_HEADER = "JapaneseLyricsHelper/JapaneseLyricsHelper-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

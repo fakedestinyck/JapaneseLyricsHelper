@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Alamofire
 
 class SongTableViewController: UITableViewController {
     
@@ -35,32 +36,69 @@ class SongTableViewController: UITableViewController {
         songs += [song1, song2, song3]
     }
     
+    private func playMusic(songName: String) {
+        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+        let fileName = "/mp3/" + songName + ".mp3"
+        let music = URL(fileURLWithPath: dirPath+fileName)
+        
+        try! audioPlayer = AVAudioPlayer(contentsOf: music)
+        audioPlayer!.prepareToPlay()
+        lastPlayedName = songName
+        
+        audioPlayer!.play()
+    }
+    
+    private func downloadMusic(songName: String, image: UIImageView) {
+        SwiftSpinner.show(progress: 0, title: "正在下载\n0.00%")
+        let urlString = "http://jathere.cn/japaneseLyricsHelper/music/"+songName+".mp3"
+        let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            let fileURL = documentsURL.appendingPathComponent("mp3/\(songName).mp3")
+            
+            return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
+        }
+        
+        Alamofire.download(urlString, to: destination)
+            .downloadProgress { progress in
+                print("Download Progress: \(progress.fractionCompleted)")
+                SwiftSpinner.show(progress: progress.fractionCompleted, title: "正在下载\n\(Float(Int(progress.fractionCompleted*10000))/100.00)%")
+            }
+            .responseData { response in
+                if response.result.value != nil {
+                    SwiftSpinner.hide()
+                    image.image = #imageLiteral(resourceName: "PlayTouched")
+                    self.playMusic(songName: songName)
+                }
+            }
+    }
+    
     @objc func playButtonTouched(sender:UITapGestureRecognizer) {
         let songIndex = sender.view?.tag
         let songName = songs[songIndex!].name
         let image = sender.view as! UIImageView
         
         if image.image == #imageLiteral(resourceName: "Play") {
-            image.image = #imageLiteral(resourceName: "PlayTouched")
             
             // if last played mp3 is this song, continue
             if lastPlayedName == songName {
+                image.image = #imageLiteral(resourceName: "PlayTouched")
                 audioPlayer!.play()
             } else {
                 //prepare mp3
-                let music = URL(fileURLWithPath: Bundle.main.path(forResource: songName, ofType: "mp3", inDirectory: "mp3")!)
+                let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+                let fileName = "/mp3/" + songName + ".mp3"
                 
-                try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-                try! AVAudioSession.sharedInstance().setActive(true)
-                
-                try! audioPlayer = AVAudioPlayer(contentsOf: music)
-                audioPlayer!.prepareToPlay()
-                lastPlayedName = songName
+                let fileManager = FileManager.default
+                if !fileManager.fileExists(atPath: dirPath+fileName) {
+                    downloadMusic(songName: songName, image: image)
+                } else {
+                    image.image = #imageLiteral(resourceName: "PlayTouched")
+                    playMusic(songName: songName)
+                }
                 if lastPlayedButton != nil {
                     lastPlayedButton?.image = #imageLiteral(resourceName: "Play")
                 }
                 lastPlayedButton = image
-                audioPlayer!.play()
             }
         } else {
             image.image = #imageLiteral(resourceName: "Play")
@@ -73,6 +111,8 @@ class SongTableViewController: UITableViewController {
         super.viewDidLoad()
 
         loadSampleSongs()
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        try! AVAudioSession.sharedInstance().setActive(true)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

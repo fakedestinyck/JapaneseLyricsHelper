@@ -11,10 +11,31 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
 
+    @objc func updateMethod(_ response: [AnyHashable: Any]) {
+        if (response["downloadURL"] != nil) {
+            print(response)
+            let message = response["releaseNote"] as? String
+            let alert = UIAlertController(title: "有新的版本辣！", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "去更新", style: .default, handler: { (action) in
+                //self.createScore()
+//                if dismissOrNot == true {
+//                    self.dismiss(animated: true, completion: nil)
+//                }
+            }))
+//            alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in}))
+            self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+        }
+        //    调用checkUpdateWithDelegete后可用此方法来更新本地的版本号，如果有更新的话，在调用了此方法后再次调用将不提示更新信息。
+        PgyUpdateManager.sharedPgy().updateLocalBuildNumber()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        PgyUpdateManager.sharedPgy().start(withAppId: "f1e93f559616b8d87ae17cbbd6a37a9e");
+        PgyUpdateManager.sharedPgy().checkUpdate(withDelegete: self, selector: #selector(self.updateMethod))
+//        PgyUpdateManager.sharedPgy().checkUpdate()
         return true
     }
 

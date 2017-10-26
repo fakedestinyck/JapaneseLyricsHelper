@@ -83,35 +83,1151 @@
             </objects>
             <point key="canvasLocation" x="-274.5" y="-100"/>
         </scene>
-        <!--Song Lyrics View Controller-->
+        <!--Title-->
         <scene sceneID="ylq-5q-aUk">
             <objects>
                 <viewController id="yLn-kX-tCb" customClass="SongLyricsViewController" customModule="JapaneseLyricsHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3K2-d2-LnI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z8S-EC-LBz">
+                                <rect key="frame" x="115" y="104" width="164" height="29"/>
+                                <segments>
+                                    <segment title="原文"/>
+                                    <segment title="假名"/>
+                                    <segment title="罗马音"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="显示：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF9-fc-rU0">
+                                <rect key="frame" x="20" y="108" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击显示1：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50b-r4-u9e">
+                                <rect key="frame" x="20" y="144" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击显示2：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArW-ln-ShY">
+                                <rect key="frame" x="20" y="180" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lBX-m7-fGg">
+                                <rect key="frame" x="115" y="140" width="219" height="29"/>
+                                <segments>
+                                    <segment title="不显示"/>
+                                    <segment title="假名"/>
+                                    <segment title="罗马音"/>
+                                    <segment title="原文"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3cP-lL-vVs">
+                                <rect key="frame" x="115" y="177" width="219" height="29"/>
+                                <segments>
+                                    <segment title="不显示"/>
+                                    <segment title="假名"/>
+                                    <segment title="罗马音"/>
+                                    <segment title="原文"/>
+                                </segments>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXM-WR-V6a">
+                                <rect key="frame" x="10" y="215" width="355" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：午前4時の夢の終わりに
+　　　白く揺らめく　君を追いかけた
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：窓の外は雨の音だけで
+　　　僕らは　僕らは　夜明けに溶けてゆく
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：気づかない温度で
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：忘れさせてくれないかい?
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：幼い僕の手が
+　　　摘み取る　
+二人：淡い花
+
+二人：(分かっているよ)
+　　　(笑っているよ)
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：街を歩く誰も知らない
+　　　花の匂いに　胸を躍らせた
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：独りきりの空が傾いて
+　　　僕らは
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：(僕らは)
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：僕らは
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：(僕らは)
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：よく似た影を引く
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：大人になる前に
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：履きつぶして捨てたんだ
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：(履きつぶして捨てたんだ)
+　　　だけど思い出して
+　　　同じ
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：色　
+二人：探すから
+
+二人：あの日　きっと僕ら　毛糸のように
+　　　小さくなって　見えなくなって
+　　　お互いの想い　胸に隠して
+　　　笑顔の奥で　泣いていたんだ
+　　　踏み出せないまま　飲み込んだ声
+　　　小さくなって　見えなくなって
+　　　思いがけない言葉がこぼれた
+　　　サヨナラなんて　言いたくない
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：けれど
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：窓の外の雨がきらめいて
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：僕らは
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽　">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">：(僕らは)
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：僕らは
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：(僕らは)
+二人：静かに離れてく
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：終わらないトワイライト
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：(終わらないトワイライト)
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：吹き消してしまいたいよ
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：(吹き消してしまいたいよ)
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：答えを秘めたまま
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：(秘めたまま)
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：聴か
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：(聴か)
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：せて
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：(せて)
+二人：もう一度
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：今も　そっと抱いた　はかない夢が
+　　　小さくなって　見えなくなって
+　　　仮面の自分を　捨てられなくて
+　　　泣いていたんだ　泣いているんだ
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：踏み出せないまま　飲み込んだ声
+　　　小さくなって　見えなくなって
+　　　思いがけない言葉がこぼれた
+　　　サヨナラなんて　
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：言いたくない
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="夜">
+                                        <attributes>
+                                            <color key="NSColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.98038999999999998" green="0.50195999999999996" blue="0.44706000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：だけど　きっと僕ら　毛糸のように
+　　　小さくなって　見えなくなって
+　　　お互いの想い　胸に隠して
+　　　笑顔の奥で　泣いていたんだ
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="陽">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">　：それでも　君の名前を呼ぶんだ
+　　　小さくたって　見えなくたって
+　　　行方も知れない願いに
+　　　花を　咲かせるように
+　　　白く淡い
+二人：花を</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="HiraKakuPro-W3"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" hyphenationFactor="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.066669999999999993" green="0.066669999999999993" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pXM-WR-V6a" firstAttribute="leading" secondItem="gh5-KF-BnS" secondAttribute="leading" constant="10" id="AA1-95-tOX"/>
+                            <constraint firstItem="lBX-m7-fGg" firstAttribute="centerY" secondItem="50b-r4-u9e" secondAttribute="centerY" id="BXU-Cl-YWI"/>
+                            <constraint firstItem="ArW-ln-ShY" firstAttribute="top" secondItem="50b-r4-u9e" secondAttribute="bottom" constant="15" id="GsT-G4-08v"/>
+                            <constraint firstItem="pXM-WR-V6a" firstAttribute="bottom" secondItem="gh5-KF-BnS" secondAttribute="bottom" constant="-10" id="J0H-nw-q6c"/>
+                            <constraint firstItem="gh5-KF-BnS" firstAttribute="trailing" secondItem="pXM-WR-V6a" secondAttribute="trailing" constant="10" id="PjV-K5-Hvo"/>
+                            <constraint firstItem="ArW-ln-ShY" firstAttribute="leading" secondItem="gh5-KF-BnS" secondAttribute="leading" constant="20" id="R8j-R9-qS6"/>
+                            <constraint firstItem="OF9-fc-rU0" firstAttribute="leading" secondItem="gh5-KF-BnS" secondAttribute="leading" constant="20" id="Wug-in-Lga"/>
+                            <constraint firstItem="50b-r4-u9e" firstAttribute="leading" secondItem="gh5-KF-BnS" secondAttribute="leading" constant="20" id="Zvs-6H-5K4"/>
+                            <constraint firstItem="z8S-EC-LBz" firstAttribute="centerY" secondItem="OF9-fc-rU0" secondAttribute="centerY" id="a3X-Sb-WRI"/>
+                            <constraint firstItem="OF9-fc-rU0" firstAttribute="top" secondItem="gh5-KF-BnS" secondAttribute="top" constant="20" id="azX-mu-f2V"/>
+                            <constraint firstItem="50b-r4-u9e" firstAttribute="top" secondItem="OF9-fc-rU0" secondAttribute="bottom" constant="15" id="doQ-ah-FSj"/>
+                            <constraint firstItem="z8S-EC-LBz" firstAttribute="leading" secondItem="lBX-m7-fGg" secondAttribute="leading" id="saA-gp-FXv"/>
+                            <constraint firstItem="3cP-lL-vVs" firstAttribute="leading" secondItem="lBX-m7-fGg" secondAttribute="leading" id="tA5-yf-Pwq"/>
+                            <constraint firstItem="pXM-WR-V6a" firstAttribute="top" secondItem="3cP-lL-vVs" secondAttribute="bottom" constant="10" id="uy7-sN-8a3"/>
+                            <constraint firstItem="3cP-lL-vVs" firstAttribute="centerY" secondItem="ArW-ln-ShY" secondAttribute="centerY" id="x8D-fY-RBh"/>
+                            <constraint firstItem="lBX-m7-fGg" firstAttribute="leading" secondItem="50b-r4-u9e" secondAttribute="trailing" id="xnN-o5-Rtt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gh5-KF-BnS"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="bwG-P0-vez">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="qhO-4H-5LA">
+                            <connections>
+                                <segue destination="OXo-hY-Oct" kind="show" id="19e-r5-C2E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZhQ-3b-7yl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="-83"/>
+            <point key="canvasLocation" x="516" y="-83.497536945812811"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Qk7-w4-kWx">
             <objects>
-                <viewController title="Settings" id="OXo-hY-Oct" sceneMemberID="viewController">
+                <viewController id="OXo-hY-Oct" customClass="SettingsViewController" customModule="JapaneseLyricsHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Due-BX-C0q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击显示1：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVW-eF-JQY">
+                                <rect key="frame" x="15" y="217.66666666666666" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="显示：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whd-6r-05S">
+                                <rect key="frame" x="15" y="181.66666666666666" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="3" translatesAutoresizingMaskIntoConstraints="NO" id="Tgm-te-euX">
+                                <rect key="frame" x="110" y="213.66666666666666" width="219" height="29"/>
+                                <segments>
+                                    <segment title="原文"/>
+                                    <segment title="假名"/>
+                                    <segment title="罗马音"/>
+                                    <segment title="不显示"/>
+                                </segments>
+                                <connections>
+                                    <action selector="touchDisplayOneSeg:" destination="OXo-hY-Oct" eventType="valueChanged" id="l2T-Ij-2Qb"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="3" translatesAutoresizingMaskIntoConstraints="NO" id="pFp-lk-YOU">
+                                <rect key="frame" x="110" y="250.66666666666663" width="219" height="29"/>
+                                <segments>
+                                    <segment title="原文"/>
+                                    <segment title="假名"/>
+                                    <segment title="罗马音"/>
+                                    <segment title="不显示"/>
+                                </segments>
+                                <connections>
+                                    <action selector="touchDisplayTwoSeg:" destination="OXo-hY-Oct" eventType="valueChanged" id="MAj-3A-GMc"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rfG-a2-FgF">
+                                <rect key="frame" x="110" y="177.66666666666666" width="164" height="29"/>
+                                <segments>
+                                    <segment title="原文"/>
+                                    <segment title="假名"/>
+                                    <segment title="罗马音"/>
+                                </segments>
+                                <connections>
+                                    <action selector="defaultDisplaySeg:" destination="OXo-hY-Oct" eventType="valueChanged" id="Xfg-FG-A1K"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击显示2：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y25-vn-ed1">
+                                <rect key="frame" x="15" y="253.66666666666663" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="默认显示设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eR5-zV-qIK">
+                                <rect key="frame" x="102.33333333333333" y="118.00000000000001" width="170.33333333333337" height="33.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="字体大小：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecp-fK-vJ6">
+                                <rect key="frame" x="15" y="289.66666666666669" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="5" maxValue="55" translatesAutoresizingMaskIntoConstraints="NO" id="T2M-Qe-i8i">
+                                <rect key="frame" x="108" y="284.66666666666669" width="229" height="31"/>
+                                <connections>
+                                    <action selector="fontSizeSlider:" destination="OXo-hY-Oct" eventType="valueChanged" id="jtA-MD-7HJ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ec-I1-Ggq">
+                                <rect key="frame" x="10" y="344.66666666666669" width="355" height="28"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="プレビュー：佐藤友咲">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="20" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tgm-te-euX" firstAttribute="leading" secondItem="EVW-eF-JQY" secondAttribute="trailing" id="1Ve-8a-HHq"/>
+                            <constraint firstItem="T2M-Qe-i8i" firstAttribute="leading" secondItem="Tgm-te-euX" secondAttribute="leading" id="28H-rW-h0c"/>
+                            <constraint firstItem="Y25-vn-ed1" firstAttribute="leading" secondItem="EVW-eF-JQY" secondAttribute="leading" id="4t7-Dl-opo"/>
+                            <constraint firstItem="Ecp-fK-vJ6" firstAttribute="leading" secondItem="Y25-vn-ed1" secondAttribute="leading" id="6G8-lG-PaT"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rfG-a2-FgF" secondAttribute="trailing" constant="20" symbolic="YES" id="7VT-94-Ay9"/>
+                            <constraint firstItem="Tgm-te-euX" firstAttribute="centerY" secondItem="EVW-eF-JQY" secondAttribute="centerY" id="AB6-iy-ufA"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Whd-6r-05S" secondAttribute="trailing" constant="20" symbolic="YES" id="CzN-Wy-mD5"/>
+                            <constraint firstItem="T2M-Qe-i8i" firstAttribute="centerY" secondItem="Ecp-fK-vJ6" secondAttribute="centerY" id="Ezy-88-umJ"/>
+                            <constraint firstItem="3ec-I1-Ggq" firstAttribute="leading" secondItem="ZPb-bZ-mKe" secondAttribute="leading" constant="10" id="G0Z-gd-clH"/>
+                            <constraint firstItem="ZPb-bZ-mKe" firstAttribute="trailing" secondItem="3ec-I1-Ggq" secondAttribute="trailing" constant="10" id="J9J-9x-CP8"/>
+                            <constraint firstItem="pFp-lk-YOU" firstAttribute="leading" secondItem="Tgm-te-euX" secondAttribute="leading" id="KAH-XD-onJ"/>
+                            <constraint firstItem="Whd-6r-05S" firstAttribute="top" secondItem="eR5-zV-qIK" secondAttribute="bottom" constant="30" id="N2N-0O-RIK"/>
+                            <constraint firstItem="eR5-zV-qIK" firstAttribute="centerX" secondItem="Due-BX-C0q" secondAttribute="centerX" id="Vm7-4w-gLw"/>
+                            <constraint firstItem="Y25-vn-ed1" firstAttribute="top" secondItem="EVW-eF-JQY" secondAttribute="bottom" constant="15" id="Xcs-fb-25N"/>
+                            <constraint firstItem="EVW-eF-JQY" firstAttribute="leading" secondItem="Whd-6r-05S" secondAttribute="leading" id="YiS-aY-lh3"/>
+                            <constraint firstItem="rfG-a2-FgF" firstAttribute="leading" secondItem="Tgm-te-euX" secondAttribute="leading" id="ZbG-Y3-sb4"/>
+                            <constraint firstItem="Ecp-fK-vJ6" firstAttribute="top" secondItem="Y25-vn-ed1" secondAttribute="bottom" constant="15" id="c1Y-jB-DrS"/>
+                            <constraint firstItem="eR5-zV-qIK" firstAttribute="top" secondItem="ZPb-bZ-mKe" secondAttribute="top" constant="30" id="chT-bX-h4t"/>
+                            <constraint firstItem="3ec-I1-Ggq" firstAttribute="centerX" secondItem="Due-BX-C0q" secondAttribute="centerX" id="dKb-Pr-mgr"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Tgm-te-euX" secondAttribute="trailing" constant="20" symbolic="YES" id="fYp-mD-oKp"/>
+                            <constraint firstItem="Whd-6r-05S" firstAttribute="leading" secondItem="ZPb-bZ-mKe" secondAttribute="leading" constant="15" id="leO-Of-8xy"/>
+                            <constraint firstItem="pFp-lk-YOU" firstAttribute="centerY" secondItem="Y25-vn-ed1" secondAttribute="centerY" id="mFR-SD-p2m"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pFp-lk-YOU" secondAttribute="trailing" constant="20" symbolic="YES" id="n22-aF-jvC"/>
+                            <constraint firstItem="ZPb-bZ-mKe" firstAttribute="trailing" secondItem="T2M-Qe-i8i" secondAttribute="trailing" constant="40" id="nLE-v1-DlV"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Y25-vn-ed1" secondAttribute="trailing" constant="20" symbolic="YES" id="ndZ-mq-2qh"/>
+                            <constraint firstItem="3ec-I1-Ggq" firstAttribute="top" secondItem="T2M-Qe-i8i" secondAttribute="bottom" constant="30" id="pH4-qA-EsR"/>
+                            <constraint firstItem="EVW-eF-JQY" firstAttribute="top" secondItem="Whd-6r-05S" secondAttribute="bottom" constant="15" id="pIe-ag-Amm"/>
+                            <constraint firstItem="rfG-a2-FgF" firstAttribute="centerY" secondItem="Whd-6r-05S" secondAttribute="centerY" id="sag-S4-efX"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ecp-fK-vJ6" secondAttribute="trailing" constant="20" symbolic="YES" id="v2W-Ue-ROD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZPb-bZ-mKe"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Settings" id="6td-Ir-a49">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Sdw-hE-QJw">
+                            <connections>
+                                <action selector="saveButton:" destination="OXo-hY-Oct" id="cDL-zN-Ekm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="defaultDisplaySeg" destination="rfG-a2-FgF" id="Gfa-7L-iLO"/>
+                        <outlet property="fontSizeSlider" destination="T2M-Qe-i8i" id="rnN-xq-wIg"/>
+                        <outlet property="previewLabel" destination="3ec-I1-Ggq" id="0oH-q2-ziS"/>
+                        <outlet property="touchDisplayOneSeg" destination="Tgm-te-euX" id="QtY-zH-44d"/>
+                        <outlet property="touchDisplayTwoSeg" destination="pFp-lk-YOU" id="zCP-E4-CJ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTG-0k-yqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="-745"/>
+            <point key="canvasLocation" x="516" y="-745.56650246305423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pae-LT-yNK">
@@ -133,4 +1249,7 @@
     <resources>
         <image name="Play" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="19e-r5-C2E"/>
+    </inferredMetricsTieBreakers>
 </document>
