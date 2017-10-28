@@ -3,3 +3,4 @@
 //
 
 #import <PgyUpdate/PgyUpdateManager.h>
+#import "YBAttributeTextTapAction/UILabel+YBAttributeTextTapAction.h"

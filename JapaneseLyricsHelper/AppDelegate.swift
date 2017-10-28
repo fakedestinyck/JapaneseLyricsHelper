@@ -25,15 +25,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                }
             }))
 //            alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in}))
+            SwiftSpinner.hide()
             self.window?.rootViewController?.present(alert, animated: true, completion: nil)
         }
+        SwiftSpinner.hide()
         //    调用checkUpdateWithDelegete后可用此方法来更新本地的版本号，如果有更新的话，在调用了此方法后再次调用将不提示更新信息。
-        PgyUpdateManager.sharedPgy().updateLocalBuildNumber()
+//        PgyUpdateManager.sharedPgy().updateLocalBuildNumber()
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         PgyUpdateManager.sharedPgy().start(withAppId: "f1e93f559616b8d87ae17cbbd6a37a9e");
+        SwiftSpinner.useContainerView(self.window?.rootViewController?.view)
+        SwiftSpinner.show("检查更新中...")
         PgyUpdateManager.sharedPgy().checkUpdate(withDelegete: self, selector: #selector(self.updateMethod))
 //        PgyUpdateManager.sharedPgy().checkUpdate()
         return true

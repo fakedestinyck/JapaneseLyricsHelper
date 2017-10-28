@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 import Alamofire
 
-class SongTableViewController: UITableViewController {
+class SongTableViewController: UITableViewController{
     
     //MARK: Properties
     
@@ -17,6 +17,10 @@ class SongTableViewController: UITableViewController {
     private var audioPlayer: AVAudioPlayer?
     private var lastPlayedName = ""
     private var lastPlayedButton: UIImageView?
+    
+
+    
+    
     
     //MARK: Private Methods
     
@@ -33,7 +37,11 @@ class SongTableViewController: UITableViewController {
             fatalError("Unable to instantiate meal1")
         }
         
-        songs += [song1, song2, song3]
+        guard let song4 = Song(name:"yumemaboro", title: "夢幻花火", languages: ["jp","kana"], lyrics: nil) else {
+            fatalError("Unable to instantiate meal1")
+        }
+        
+        songs += [song1, song2, song3, song4]
     }
     
     private func playMusic(songName: String) {
@@ -76,8 +84,7 @@ class SongTableViewController: UITableViewController {
         let songIndex = sender.view?.tag
         let songName = songs[songIndex!].name
         let image = sender.view as! UIImageView
-        
-        if image.image == #imageLiteral(resourceName: "Play") {
+        if image.image != #imageLiteral(resourceName: "PlayTouched") { // don't know why image.image == #imageLiteral(resourceName: "Play") didn't work
             
             // if last played mp3 is this song, continue
             if lastPlayedName == songName {
@@ -160,6 +167,9 @@ class SongTableViewController: UITableViewController {
         
         return cell
     }
+    
+    
+    
  
 
     /*
@@ -231,3 +241,4 @@ class SongTableViewController: UITableViewController {
     }
 
 }
+

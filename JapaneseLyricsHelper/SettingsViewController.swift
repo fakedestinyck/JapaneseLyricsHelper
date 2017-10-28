@@ -100,6 +100,7 @@ class SettingsViewController: UIViewController {
         let previewString = previewLabel.text
         let mutableString = NSMutableAttributedString(string: previewString!)
         mutableString.addAttribute(NSAttributedStringKey.font, value: UIFont(name: previewLabel.font.familyName, size: CGFloat(fontSizeSlider.value))!,range: NSMakeRange(0,(previewString! as NSString).length))
+        print(previewLabel.font.familyName)
         previewLabel.attributedText = mutableString
         fontSize = CGFloat(fontSizeSlider.value)
     }
