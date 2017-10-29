@@ -13,7 +13,7 @@ import Alamofire
 class SongLyricsViewController: UIViewController {
     
     //MARK: Properties
-    var fontSize = CGFloat(20);
+    var fontSize = CGFloat(25);
     var displayLanguages = [0] // 0->jp, 1->kana, 2->romaji
     var currentDisplayLanguageIndex = 0
     
@@ -112,50 +112,59 @@ class SongLyricsViewController: UIViewController {
         
     }
     
-    func createLabel(strText: String) {
-        var label : UILabel
-        label = UILabel.init(frame: CGRect.init(x: 10, y: 100, width: 200, height: 1000))
-        let str = strText
-        label.layer.borderWidth = 1;
-        label.layer.borderColor = UIColor.gray.cgColor
-        label.numberOfLines = 0
-        label.lineBreakMode = .byCharWrapping
-        let attStr = NSMutableAttributedString.init(string: str)
-        
-        attStr.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 20), range: NSMakeRange(0, str.characters.count))
-        
-        label.attributedText = attStr
-        label.textAlignment = NSTextAlignment.center
-//        label.yb_addAttributeTapAction(["の","時","の", "午前", "わりに"]) { (string, range, int) in
-//            print(range)
-//        }
-        
-        
-        // MARK: 关闭点击效果 默认是开启的
-        //        label.enabledTapEffect = false
-        
-        
-        self.view.addSubview(label)
-    }
+//    func createLabel(strText: String) {
+//        var label : UILabel
+//        label = UILabel.init(frame: CGRect.init(x: 10, y: 100, width: 200, height: 1000))
+//        let str = strText
+//        label.layer.borderWidth = 1;
+//        label.layer.borderColor = UIColor.gray.cgColor
+//        label.numberOfLines = 0
+//        label.lineBreakMode = .byCharWrapping
+//        let attStr = NSMutableAttributedString.init(string: str)
+//        
+//        attStr.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 25), range: NSMakeRange(0, str.characters.count))
+//        
+//        label.attributedText = attStr
+//        label.textAlignment = NSTextAlignment.center
+////        label.yb_addAttributeTapAction(["の","時","の", "午前", "わりに"]) { (string, range, int) in
+////            print(range)
+////        }
+//        
+//        
+//        // MARK: 关闭点击效果 默认是开启的
+//        //        label.enabledTapEffect = false
+//        
+//        
+//        self.view.addSubview(label)
+//    }
  
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = song?.title
         
-        if UserDefaults.standard.object(forKey: "FONT_SIZE") != nil{
-            fontSize = CGFloat(UserDefaults.standard.float(forKey: "FONT_SIZE"))
+        if !(song?.hasLyrics)! {
+            let alert = UIAlertController(title: "未找到歌词！", message: "歌词还未更新，过一段时间再刷新试试吧", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { (action) in
+            }))
+            navigationController?.popToRootViewController(animated: true)
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            if UserDefaults.standard.object(forKey: "FONT_SIZE") != nil{
+                fontSize = CGFloat(UserDefaults.standard.float(forKey: "FONT_SIZE"))
+            }
+            
+            let fileManager = FileManager.default
+            var filename = song?.name
+            let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+            filename = dirPath + "/lyric/" + filename! + ".plist"
+            if !fileManager.fileExists(atPath: filename!) {
+                downloadLyric(songName: (song?.name)!)
+            } else {
+                loadLyric()
+            }
         }
         
-        let fileManager = FileManager.default
-        var filename = song?.name
-        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
-        filename = dirPath + "/lyric/" + filename! + ".plist"
-        if !fileManager.fileExists(atPath: filename!) {
-            downloadLyric(songName: (song?.name)!)
-        } else {
-            loadLyric()
-        }
     }
 
     override func didReceiveMemoryWarning() {

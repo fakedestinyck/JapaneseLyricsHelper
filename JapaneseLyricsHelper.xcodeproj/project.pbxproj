@@ -12,6 +12,7 @@
 		633E307B1F9EA5E200644614 /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E307A1F9EA5E200644614 /* SongTableViewController.swift */; };
 		633E307D1F9EA78E00644614 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E307C1F9EA78E00644614 /* Song.swift */; };
 		633E30841F9F23E900644614 /* SongLyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E30831F9F23E900644614 /* SongLyricsViewController.swift */; };
+		6365D7AD1FA3F92800E8328F /* ヒラギノ丸ゴ ProN W4.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 6365D7AC1FA3F92500E8328F /* ヒラギノ丸ゴ ProN W4.ttc */; };
 		63985B831F9DC00C009B4B17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63985B821F9DC00C009B4B17 /* AppDelegate.swift */; };
 		63985B851F9DC00C009B4B17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63985B841F9DC00C009B4B17 /* ViewController.swift */; };
 		63985B881F9DC00C009B4B17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63985B861F9DC00C009B4B17 /* Main.storyboard */; };
@@ -19,6 +20,9 @@
 		63985B8D1F9DC00C009B4B17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63985B8B1F9DC00C009B4B17 /* LaunchScreen.storyboard */; };
 		639EE0EB1FA0F5FC00C95667 /* PgyUpdate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639EE0EA1FA0F5FC00C95667 /* PgyUpdate.framework */; };
 		639EE0F21FA118F900C95667 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639EE0F11FA118F900C95667 /* SettingsViewController.swift */; };
+		639EE0F81FA27F6B00C95667 /* LyricRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639EE0F71FA27F6B00C95667 /* LyricRow.swift */; };
+		639EE11E1FA3E14D00C95667 /* YBAttributeTextTapForSwfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639EE11D1FA3E14D00C95667 /* YBAttributeTextTapForSwfit.swift */; };
+		639EE1221FA3EF7200C95667 /* UILabel+YBAttributeTextTapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 639EE1211FA3EF7200C95667 /* UILabel+YBAttributeTextTapAction.m */; };
 		8508D6A3F76CE3236560FC51 /* Pods_JapaneseLyricsHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78301D3F5A776D81138B3D0 /* Pods_JapaneseLyricsHelper.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +33,7 @@
 		633E307A1F9EA5E200644614 /* SongTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
 		633E307C1F9EA78E00644614 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		633E30831F9F23E900644614 /* SongLyricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongLyricsViewController.swift; sourceTree = "<group>"; };
+		6365D7AC1FA3F92500E8328F /* ヒラギノ丸ゴ ProN W4.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ヒラギノ丸ゴ ProN W4.ttc"; sourceTree = "<group>"; };
 		63985B7F1F9DC00C009B4B17 /* JapaneseLyricsHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseLyricsHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63985B821F9DC00C009B4B17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63985B841F9DC00C009B4B17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +46,10 @@
 		639EE0EA1FA0F5FC00C95667 /* PgyUpdate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PgyUpdate.framework; sourceTree = "<group>"; };
 		639EE0EC1FA0F67700C95667 /* JapaneseLyricsHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JapaneseLyricsHelper-Bridging-Header.h"; sourceTree = "<group>"; };
 		639EE0F11FA118F900C95667 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		639EE0F71FA27F6B00C95667 /* LyricRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricRow.swift; sourceTree = "<group>"; };
+		639EE11D1FA3E14D00C95667 /* YBAttributeTextTapForSwfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YBAttributeTextTapForSwfit.swift; sourceTree = "<group>"; };
+		639EE1201FA3EF7200C95667 /* UILabel+YBAttributeTextTapAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YBAttributeTextTapAction.h"; sourceTree = "<group>"; };
+		639EE1211FA3EF7200C95667 /* UILabel+YBAttributeTextTapAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YBAttributeTextTapAction.m"; sourceTree = "<group>"; };
 		DF22D4258B82B0AF2EDC161F /* Pods-JapaneseLyricsHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapaneseLyricsHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JapaneseLyricsHelper/Pods-JapaneseLyricsHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		F78301D3F5A776D81138B3D0 /* Pods_JapaneseLyricsHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JapaneseLyricsHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,21 +89,34 @@
 			isa = PBXGroup;
 			children = (
 				639EE0EA1FA0F5FC00C95667 /* PgyUpdate.framework */,
+				639EE11F1FA3EF7200C95667 /* YBAttributeTextTapAction */,
+				6327BA4F1FA0479A00ECEFD9 /* SwiftSpinner.swift */,
+				639EE11D1FA3E14D00C95667 /* YBAttributeTextTapForSwfit.swift */,
+				6365D7AC1FA3F92500E8328F /* ヒラギノ丸ゴ ProN W4.ttc */,
+				63985B891F9DC00C009B4B17 /* Assets.xcassets */,
 				633E30761F9E9A8000644614 /* SongTableViewCell.swift */,
 				633E307A1F9EA5E200644614 /* SongTableViewController.swift */,
-				6327BA4F1FA0479A00ECEFD9 /* SwiftSpinner.swift */,
 				633E307C1F9EA78E00644614 /* Song.swift */,
 				633E30831F9F23E900644614 /* SongLyricsViewController.swift */,
 				63985B821F9DC00C009B4B17 /* AppDelegate.swift */,
 				63985B841F9DC00C009B4B17 /* ViewController.swift */,
 				63985B861F9DC00C009B4B17 /* Main.storyboard */,
 				639EE0F11FA118F900C95667 /* SettingsViewController.swift */,
-				63985B891F9DC00C009B4B17 /* Assets.xcassets */,
+				639EE0F71FA27F6B00C95667 /* LyricRow.swift */,
 				63985B8B1F9DC00C009B4B17 /* LaunchScreen.storyboard */,
 				63985B8E1F9DC00C009B4B17 /* Info.plist */,
 				639EE0EC1FA0F67700C95667 /* JapaneseLyricsHelper-Bridging-Header.h */,
 			);
 			path = JapaneseLyricsHelper;
+			sourceTree = "<group>";
+		};
+		639EE11F1FA3EF7200C95667 /* YBAttributeTextTapAction */ = {
+			isa = PBXGroup;
+			children = (
+				639EE1201FA3EF7200C95667 /* UILabel+YBAttributeTextTapAction.h */,
+				639EE1211FA3EF7200C95667 /* UILabel+YBAttributeTextTapAction.m */,
+			);
+			path = YBAttributeTextTapAction;
 			sourceTree = "<group>";
 		};
 		A1B624AC690AA39423D96AEB /* Pods */ = {
@@ -127,6 +149,7 @@
 				63985B7D1F9DC00C009B4B17 /* Resources */,
 				2278B8466AF087CD4DB2C5C3 /* [CP] Embed Pods Frameworks */,
 				16397DCBEE3EB7C68DDC3DFA /* [CP] Copy Pods Resources */,
+				6369EB4E1FA58CCF00F506B8 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -175,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6365D7AD1FA3F92800E8328F /* ヒラギノ丸ゴ ProN W4.ttc in Resources */,
 				63985B8D1F9DC00C009B4B17 /* LaunchScreen.storyboard in Resources */,
 				63985B8A1F9DC00C009B4B17 /* Assets.xcassets in Resources */,
 				63985B881F9DC00C009B4B17 /* Main.storyboard in Resources */,
@@ -229,6 +253,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JapaneseLyricsHelper/Pods-JapaneseLyricsHelper-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6369EB4E1FA58CCF00F506B8 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbuildNumber=$(date +%Y%m%d%H%M%S)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -238,9 +276,12 @@
 			files = (
 				633E30771F9E9A8000644614 /* SongTableViewCell.swift in Sources */,
 				633E30841F9F23E900644614 /* SongLyricsViewController.swift in Sources */,
+				639EE11E1FA3E14D00C95667 /* YBAttributeTextTapForSwfit.swift in Sources */,
 				63985B851F9DC00C009B4B17 /* ViewController.swift in Sources */,
 				6327BA501FA0479A00ECEFD9 /* SwiftSpinner.swift in Sources */,
 				633E307B1F9EA5E200644614 /* SongTableViewController.swift in Sources */,
+				639EE1221FA3EF7200C95667 /* UILabel+YBAttributeTextTapAction.m in Sources */,
+				639EE0F81FA27F6B00C95667 /* LyricRow.swift in Sources */,
 				63985B831F9DC00C009B4B17 /* AppDelegate.swift in Sources */,
 				633E307D1F9EA78E00644614 /* Song.swift in Sources */,
 				639EE0F21FA118F900C95667 /* SettingsViewController.swift in Sources */,

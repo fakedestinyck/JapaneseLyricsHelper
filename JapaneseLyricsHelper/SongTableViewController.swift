@@ -18,30 +18,53 @@ class SongTableViewController: UITableViewController{
     private var lastPlayedName = ""
     private var lastPlayedButton: UIImageView?
     
-
+    @IBOutlet weak var settingsButton: UIBarButtonItem!
+    
     
     
     
     //MARK: Private Methods
     
-    private func loadSampleSongs() {
-        guard let song1 = Song(name:"awaihana", title: "淡い花", languages: ["jp"], lyrics: nil) else {
-            fatalError("Unable to instantiate meal1")
-        }
+//    private func loadSampleSongs() {
+//        guard let song1 = Song(name:"awaihana", title: "淡い花", languages: ["jp"]) else {
+//            fatalError("Unable to instantiate meal1")
+//        }
+//
+//        guard let song2 = Song(name:"childish_flower", title: "Childish Flower", languages: ["jp"]) else {
+//            fatalError("Unable to instantiate meal1")
+//        }
+//
+//        guard let song3 = Song(name:"zenzenzensei", title: "前々前世", languages: ["jp"]) else {
+//            fatalError("Unable to instantiate meal1")
+//        }
+//
+//        guard let song4 = Song(name:"yumemaboro", title: "夢幻花火", languages: ["jp","kana"], hasLyrics: true) else {
+//            fatalError("Unable to instantiate meal1")
+//        }
+//
+//        songs += [song1, song2, song3, song4]
+//    }
+    
+    // 把读取到的歌曲列表实例化，并append到songs中
+    private func readSongs() {
+        var filename = "songList"
+        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+        filename = dirPath + "/" + filename + ".plist"
+        let songArray = NSArray(contentsOfFile: filename) as! [[String:AnyObject]]
         
-        guard let song2 = Song(name:"childish_flower", title: "Childish Flower", languages: ["jp"], lyrics: nil) else {
-            fatalError("Unable to instantiate meal1")
+        for song in songArray {
+            let tmpName = song["name"] as! String
+            let tmpTitle = song["title"] as! String
+            let tmpLanguages = song["language"] as! [String]
+            let tmpHasLyrics = song["hasLyrics"] as! Bool
+            guard let tmpSong = Song(name: tmpName, title: tmpTitle, languages: tmpLanguages, hasLyrics: tmpHasLyrics) else {
+                fatalError("Unable to instantiate a song")
+            }
+            songs.append(tmpSong)
         }
-        
-        guard let song3 = Song(name:"zenzenzensei", title: "前々前世", languages: ["jp"], lyrics: nil) else {
-            fatalError("Unable to instantiate meal1")
-        }
-        
-        guard let song4 = Song(name:"yumemaboro", title: "夢幻花火", languages: ["jp","kana"], lyrics: nil) else {
-            fatalError("Unable to instantiate meal1")
-        }
-        
-        songs += [song1, song2, song3, song4]
+        self.tableView.reloadData()
+        settingsButton.isEnabled = true
+        SwiftSpinner.hide()
     }
     
     private func playMusic(songName: String) {
@@ -113,11 +136,32 @@ class SongTableViewController: UITableViewController{
         }
         
     }
+    
+    func refreshSongList() {
+        SwiftSpinner.show("正在刷新歌曲列表")
+        let urlString = "http://jathere.cn/japaneseLyricsHelper/songList.plist"
+        let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            let fileURL = documentsURL.appendingPathComponent("songList.plist")
+            
+            return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
+        }
+        
+        Alamofire.download(urlString, to: destination)
+            .downloadProgress { progress in
+                print("Download Progress: \(progress.fractionCompleted)")
+            }
+            .responseData { response in
+                if response.result.value != nil {
+                    self.readSongs()
+                }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loadSampleSongs()
+//        refreshSongList()
         try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
         try! AVAudioSession.sharedInstance().setActive(true)
         // Uncomment the following line to preserve selection between presentations
@@ -157,7 +201,28 @@ class SongTableViewController: UITableViewController{
         let song = songs[indexPath.row]
         
         cell.songTitleLabel.text = song.title
-        cell.languagesLabel.text = song.languages[0]
+        cell.languagesLabel.text = ""
+        if song.hasLyrics {
+            for language in song.languages {
+                var labelDisplayedLanguage = ""
+                switch language {
+                case "jp":
+                    labelDisplayedLanguage = "日文原文"
+                case "kana":
+                    labelDisplayedLanguage = "假名标注"
+                default:
+                    labelDisplayedLanguage = ""
+                }
+                if cell.languagesLabel.text == "" {
+                    cell.languagesLabel.text = labelDisplayedLanguage
+                } else {
+                    cell.languagesLabel.text = cell.languagesLabel.text! + " " + labelDisplayedLanguage
+                }
+            }
+        } else {
+            cell.languagesLabel.text = "无歌词，过一段时间再刷新试试"
+        }
+        
         cell.playButtonImage.image = #imageLiteral(resourceName: "Play")
         cell.playButtonImage.tag = indexPath.row
         

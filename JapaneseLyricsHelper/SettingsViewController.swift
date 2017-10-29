@@ -15,7 +15,7 @@ class SettingsViewController: UIViewController {
     var currentDisplayLanguageIndex = 0
     var previewTextArray = ["プレビュー：佐藤友咲", "プレビュー：さとうゆうさく", "pu re byu -：sa to u yu u sa ku"]
     var previewTimesTouched = 0;
-    var fontSize = CGFloat(20);
+    var fontSize = CGFloat(25);
     
     @IBOutlet weak var defaultDisplaySeg: UISegmentedControl!
     @IBOutlet weak var touchDisplayOneSeg: UISegmentedControl!
@@ -100,7 +100,6 @@ class SettingsViewController: UIViewController {
         let previewString = previewLabel.text
         let mutableString = NSMutableAttributedString(string: previewString!)
         mutableString.addAttribute(NSAttributedStringKey.font, value: UIFont(name: previewLabel.font.familyName, size: CGFloat(fontSizeSlider.value))!,range: NSMakeRange(0,(previewString! as NSString).length))
-        print(previewLabel.font.familyName)
         previewLabel.attributedText = mutableString
         fontSize = CGFloat(fontSizeSlider.value)
     }

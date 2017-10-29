@@ -14,16 +14,16 @@ class Song {
     var name: String
     var title: String
     var languages: [String]
-    var lyrics: [String]?
+    var hasLyrics: Bool
     
     
     //MARK: Initialization
     
-    init?(name: String, title: String, languages: [String], lyrics: [String]?) {
+    init?(name: String, title: String, languages: [String], hasLyrics: Bool = false) {
         self.name = name
         self.title = title
         self.languages = languages
-        self.lyrics = lyrics
+        self.hasLyrics = hasLyrics
         
         if name.isEmpty || title.isEmpty || languages.isEmpty {
             return nil

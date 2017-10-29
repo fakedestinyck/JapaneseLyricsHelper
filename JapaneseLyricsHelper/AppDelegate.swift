@@ -16,21 +16,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     @objc func updateMethod(_ response: [AnyHashable: Any]) {
         if (response["downloadURL"] != nil) {
             print(response)
+            (self.window?.rootViewController?.childViewControllers[0] as! SongTableViewController).settingsButton.isEnabled = false
             let message = response["releaseNote"] as? String
             let alert = UIAlertController(title: "有新的版本辣！", message: message, preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "去更新", style: .default, handler: { (action) in
-                //self.createScore()
+                PgyUpdateManager.sharedPgy().updateLocalBuildNumber()
+                UIApplication.shared.openURL(URL(string: response["downloadURL"] as! String)!)
 //                if dismissOrNot == true {
 //                    self.dismiss(animated: true, completion: nil)
 //                }
             }))
 //            alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in}))
             SwiftSpinner.hide()
+            
             self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+        } else {
+            print("no update")
+            // SwiftSpinner.hide()
+            // 在后面直接hide 这里不用hide了
+            (self.window?.rootViewController?.childViewControllers[0] as! SongTableViewController).refreshSongList()
+            
         }
-        SwiftSpinner.hide()
+        
         //    调用checkUpdateWithDelegete后可用此方法来更新本地的版本号，如果有更新的话，在调用了此方法后再次调用将不提示更新信息。
-//        PgyUpdateManager.sharedPgy().updateLocalBuildNumber()
+        
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -40,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SwiftSpinner.show("检查更新中...")
         PgyUpdateManager.sharedPgy().checkUpdate(withDelegete: self, selector: #selector(self.updateMethod))
 //        PgyUpdateManager.sharedPgy().checkUpdate()
-        return true
+        return false
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
