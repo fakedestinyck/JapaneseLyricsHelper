@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sFx-Oi-ibd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sFx-Oi-ibd">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,23 +24,23 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rVS-yX-Uks" id="iWE-sQ-VUT">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrs-h9-qeK">
-                                            <rect key="frame" x="18" y="13" width="279" height="30"/>
+                                            <rect key="frame" x="26" y="16" width="263" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="languages included" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUa-DK-Xcc">
-                                            <rect key="frame" x="18" y="48" width="279" height="21"/>
+                                            <rect key="frame" x="26" y="51" width="263" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play" translatesAutoresizingMaskIntoConstraints="NO" id="xBq-9n-5RW">
-                                            <rect key="frame" x="307" y="17.333333333333332" width="50" height="50.333333333333343"/>
+                                            <rect key="frame" x="299" y="17.333333333333332" width="50" height="50.333333333333343"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="Aas-hd-Gan"/>
                                                 <constraint firstAttribute="height" constant="50" id="zN5-8y-nJk"/>
@@ -164,14 +164,15 @@
                         <viewLayoutGuide key="safeArea" id="gh5-KF-BnS"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="bwG-P0-vez">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="qhO-4H-5LA">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="refresh" id="qhO-4H-5LA">
                             <connections>
-                                <segue destination="OXo-hY-Oct" kind="show" id="19e-r5-C2E"/>
+                                <action selector="refreshLrcButton:" destination="yLn-kX-tCb" id="NQa-fX-RzH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="lyricScrollView" destination="Bjm-ul-eKk" id="fhh-4k-b5T"/>
+                        <outlet property="refreshLrcButton" destination="qhO-4H-5LA" id="Dk0-uu-ajz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZhQ-3b-7yl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -344,7 +345,4 @@
     <resources>
         <image name="Play" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="xCX-to-jAa"/>
-    </inferredMetricsTieBreakers>
 </document>

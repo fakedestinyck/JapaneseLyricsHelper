@@ -25,26 +25,6 @@ class SongTableViewController: UITableViewController{
     
     //MARK: Private Methods
     
-//    private func loadSampleSongs() {
-//        guard let song1 = Song(name:"awaihana", title: "淡い花", languages: ["jp"]) else {
-//            fatalError("Unable to instantiate meal1")
-//        }
-//
-//        guard let song2 = Song(name:"childish_flower", title: "Childish Flower", languages: ["jp"]) else {
-//            fatalError("Unable to instantiate meal1")
-//        }
-//
-//        guard let song3 = Song(name:"zenzenzensei", title: "前々前世", languages: ["jp"]) else {
-//            fatalError("Unable to instantiate meal1")
-//        }
-//
-//        guard let song4 = Song(name:"yumemaboro", title: "夢幻花火", languages: ["jp","kana"], hasLyrics: true) else {
-//            fatalError("Unable to instantiate meal1")
-//        }
-//
-//        songs += [song1, song2, song3, song4]
-//    }
-    
     // 把读取到的歌曲列表实例化，并append到songs中
     private func readSongs() {
         var filename = "songList"
@@ -57,7 +37,8 @@ class SongTableViewController: UITableViewController{
             let tmpTitle = song["title"] as! String
             let tmpLanguages = song["language"] as! [String]
             let tmpHasLyrics = song["hasLyrics"] as! Bool
-            guard let tmpSong = Song(name: tmpName, title: tmpTitle, languages: tmpLanguages, hasLyrics: tmpHasLyrics) else {
+            let tmpVersion = song["version"] as! String
+            guard let tmpSong = Song(name: tmpName, title: tmpTitle, languages: tmpLanguages, hasLyrics: tmpHasLyrics, version: tmpVersion) else {
                 fatalError("Unable to instantiate a song")
             }
             songs.append(tmpSong)

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>awaihana</string>
+		<key>title</key>
+		<string>淡い花</string>
+		<key>language</key>
+		<array>
+			<string>jp</string>
+		</array>
+		<key>hasLyrics</key>
+		<false/>
+		<key>version</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>childish_flower</string>
+		<key>title</key>
+		<string>Childish Flower</string>
+		<key>language</key>
+		<array>
+			<string>jp</string>
+		</array>
+		<key>hasLyrics</key>
+		<false/>
+		<key>version</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>mugenhanabi</string>
+		<key>title</key>
+		<string>夢幻花火</string>
+		<key>language</key>
+		<array>
+			<string>jp</string>
+			<string>kana</string>
+		</array>
+		<key>hasLyrics</key>
+		<true/>
+		<key>version</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>tsukisetsuna</string>
+		<key>title</key>
+		<string>月と、刹那のきらめきを</string>
+		<key>language</key>
+		<array>
+			<string>jp</string>
+			<string>kana</string>
+		</array>
+		<key>hasLyrics</key>
+		<false/>
+		<key>version</key>
+		<string>0</string>
+	</dict>
+</array>
+</plist>

@@ -13,6 +13,23 @@
 		633E307D1F9EA78E00644614 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E307C1F9EA78E00644614 /* Song.swift */; };
 		633E30841F9F23E900644614 /* SongLyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E30831F9F23E900644614 /* SongLyricsViewController.swift */; };
 		6365D7AD1FA3F92800E8328F /* ヒラギノ丸ゴ ProN W4.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 6365D7AC1FA3F92500E8328F /* ヒラギノ丸ゴ ProN W4.ttc */; };
+		636868001FE5AF4100317944 /* GTSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636867FE1FE5AF4100317944 /* GTSDK.framework */; };
+		636868021FE5B08100317944 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 636868011FE5B08100317944 /* libc++.tbd */; };
+		636868041FE5B0A900317944 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 636868031FE5B0A900317944 /* libz.tbd */; };
+		636868061FE5B0B300317944 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 636868051FE5B0B300317944 /* libsqlite3.tbd */; };
+		636868081FE5B0C100317944 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636868071FE5B0C100317944 /* Security.framework */; };
+		6368680A1FE5B0DA00317944 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636868091FE5B0DA00317944 /* MobileCoreServices.framework */; };
+		6368680C1FE5B0E800317944 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6368680B1FE5B0E800317944 /* SystemConfiguration.framework */; };
+		6368680E1FE5B0F100317944 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6368680D1FE5B0F100317944 /* CoreTelephony.framework */; };
+		636868101FE5B0FF00317944 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6368680F1FE5B0FF00317944 /* AVFoundation.framework */; };
+		636868121FE5B10700317944 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636868111FE5B10700317944 /* CoreLocation.framework */; };
+		636868141FE5B11300317944 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636868131FE5B11300317944 /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6368681D1FE5B52E00317944 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6368681C1FE5B52E00317944 /* NotificationService.swift */; };
+		636868211FE5B52E00317944 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6368681A1FE5B52E00317944 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		636868261FE5B59600317944 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 636868031FE5B0A900317944 /* libz.tbd */; };
+		636868271FE5B59D00317944 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 636868051FE5B0B300317944 /* libsqlite3.tbd */; };
+		636868291FE5B5E800317944 /* GTExtensionSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636868281FE5B5E800317944 /* GTExtensionSDK.framework */; };
+		6368682A1FE5B61100317944 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636868131FE5B11300317944 /* UserNotifications.framework */; };
 		63985B831F9DC00C009B4B17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63985B821F9DC00C009B4B17 /* AppDelegate.swift */; };
 		63985B851F9DC00C009B4B17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63985B841F9DC00C009B4B17 /* ViewController.swift */; };
 		63985B881F9DC00C009B4B17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63985B861F9DC00C009B4B17 /* Main.storyboard */; };
@@ -26,14 +43,55 @@
 		8508D6A3F76CE3236560FC51 /* Pods_JapaneseLyricsHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78301D3F5A776D81138B3D0 /* Pods_JapaneseLyricsHelper.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6368681F1FE5B52E00317944 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63985B771F9DC00C009B4B17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 636868191FE5B52E00317944;
+			remoteInfo = NotificationService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		636868251FE5B52E00317944 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				636868211FE5B52E00317944 /* NotificationService.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5F557865B008199E0FFE989E /* Pods-JapaneseLyricsHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapaneseLyricsHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-JapaneseLyricsHelper/Pods-JapaneseLyricsHelper.release.xcconfig"; sourceTree = "<group>"; };
 		6327BA4F1FA0479A00ECEFD9 /* SwiftSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
+		63384DC11FE5B702003CBD38 /* NotificationService-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NotificationService-Bridging-Header.h"; sourceTree = "<group>"; };
 		633E30761F9E9A8000644614 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		633E307A1F9EA5E200644614 /* SongTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
 		633E307C1F9EA78E00644614 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		633E30831F9F23E900644614 /* SongLyricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongLyricsViewController.swift; sourceTree = "<group>"; };
+		633E30831F9F23E900644614 /* SongLyricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongLyricsViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		6365D7AC1FA3F92500E8328F /* ヒラギノ丸ゴ ProN W4.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ヒラギノ丸ゴ ProN W4.ttc"; sourceTree = "<group>"; };
+		636867FE1FE5AF4100317944 /* GTSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTSDK.framework; sourceTree = "<group>"; };
+		636868011FE5B08100317944 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		636868031FE5B0A900317944 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		636868051FE5B0B300317944 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		636868071FE5B0C100317944 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		636868091FE5B0DA00317944 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6368680B1FE5B0E800317944 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6368680D1FE5B0F100317944 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6368680F1FE5B0FF00317944 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		636868111FE5B10700317944 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		636868131FE5B11300317944 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		636868151FE5B14D00317944 /* JapaneseLyricsHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JapaneseLyricsHelper.entitlements; sourceTree = "<group>"; };
+		6368681A1FE5B52E00317944 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6368681C1FE5B52E00317944 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		6368681E1FE5B52E00317944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		636868281FE5B5E800317944 /* GTExtensionSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTExtensionSDK.framework; path = JapaneseLyricsHelper/GtSdkLib/GTExtensionSDK.framework; sourceTree = SOURCE_ROOT; };
 		63985B7F1F9DC00C009B4B17 /* JapaneseLyricsHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseLyricsHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63985B821F9DC00C009B4B17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63985B841F9DC00C009B4B17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,10 +113,32 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		636868171FE5B52E00317944 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6368682A1FE5B61100317944 /* UserNotifications.framework in Frameworks */,
+				636868271FE5B59D00317944 /* libsqlite3.tbd in Frameworks */,
+				636868291FE5B5E800317944 /* GTExtensionSDK.framework in Frameworks */,
+				636868261FE5B59600317944 /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63985B7C1F9DC00C009B4B17 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636868141FE5B11300317944 /* UserNotifications.framework in Frameworks */,
+				636868121FE5B10700317944 /* CoreLocation.framework in Frameworks */,
+				636868101FE5B0FF00317944 /* AVFoundation.framework in Frameworks */,
+				6368680E1FE5B0F100317944 /* CoreTelephony.framework in Frameworks */,
+				6368680C1FE5B0E800317944 /* SystemConfiguration.framework in Frameworks */,
+				6368680A1FE5B0DA00317944 /* MobileCoreServices.framework in Frameworks */,
+				636868081FE5B0C100317944 /* Security.framework in Frameworks */,
+				636868061FE5B0B300317944 /* libsqlite3.tbd in Frameworks */,
+				636868041FE5B0A900317944 /* libz.tbd in Frameworks */,
+				636868021FE5B08100317944 /* libc++.tbd in Frameworks */,
+				636868001FE5AF4100317944 /* GTSDK.framework in Frameworks */,
 				639EE0EB1FA0F5FC00C95667 /* PgyUpdate.framework in Frameworks */,
 				8508D6A3F76CE3236560FC51 /* Pods_JapaneseLyricsHelper.framework in Frameworks */,
 			);
@@ -67,10 +147,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		636867FC1FE5AF4100317944 /* GtSdkLib */ = {
+			isa = PBXGroup;
+			children = (
+				636867FE1FE5AF4100317944 /* GTSDK.framework */,
+			);
+			path = GtSdkLib;
+			sourceTree = "<group>";
+		};
+		6368681B1FE5B52E00317944 /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				636868281FE5B5E800317944 /* GTExtensionSDK.framework */,
+				6368681C1FE5B52E00317944 /* NotificationService.swift */,
+				6368681E1FE5B52E00317944 /* Info.plist */,
+				63384DC11FE5B702003CBD38 /* NotificationService-Bridging-Header.h */,
+			);
+			path = NotificationService;
+			sourceTree = "<group>";
+		};
 		63985B761F9DC00C009B4B17 = {
 			isa = PBXGroup;
 			children = (
 				63985B811F9DC00C009B4B17 /* JapaneseLyricsHelper */,
+				6368681B1FE5B52E00317944 /* NotificationService */,
 				63985B801F9DC00C009B4B17 /* Products */,
 				A1B624AC690AA39423D96AEB /* Pods */,
 				FD2D3FCC5727AF776175B7F2 /* Frameworks */,
@@ -81,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				63985B7F1F9DC00C009B4B17 /* JapaneseLyricsHelper.app */,
+				6368681A1FE5B52E00317944 /* NotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +189,8 @@
 		63985B811F9DC00C009B4B17 /* JapaneseLyricsHelper */ = {
 			isa = PBXGroup;
 			children = (
+				636868151FE5B14D00317944 /* JapaneseLyricsHelper.entitlements */,
+				636867FC1FE5AF4100317944 /* GtSdkLib */,
 				639EE0EA1FA0F5FC00C95667 /* PgyUpdate.framework */,
 				639EE11F1FA3EF7200C95667 /* YBAttributeTextTapAction */,
 				6327BA4F1FA0479A00ECEFD9 /* SwiftSpinner.swift */,
@@ -131,6 +234,16 @@
 		FD2D3FCC5727AF776175B7F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				636868131FE5B11300317944 /* UserNotifications.framework */,
+				636868111FE5B10700317944 /* CoreLocation.framework */,
+				6368680F1FE5B0FF00317944 /* AVFoundation.framework */,
+				6368680D1FE5B0F100317944 /* CoreTelephony.framework */,
+				6368680B1FE5B0E800317944 /* SystemConfiguration.framework */,
+				636868091FE5B0DA00317944 /* MobileCoreServices.framework */,
+				636868071FE5B0C100317944 /* Security.framework */,
+				636868051FE5B0B300317944 /* libsqlite3.tbd */,
+				636868031FE5B0A900317944 /* libz.tbd */,
+				636868011FE5B08100317944 /* libc++.tbd */,
 				F78301D3F5A776D81138B3D0 /* Pods_JapaneseLyricsHelper.framework */,
 			);
 			name = Frameworks;
@@ -139,6 +252,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		636868191FE5B52E00317944 /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 636868221FE5B52E00317944 /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				636868161FE5B52E00317944 /* Sources */,
+				636868171FE5B52E00317944 /* Frameworks */,
+				636868181FE5B52E00317944 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationService;
+			productName = NotificationService;
+			productReference = 6368681A1FE5B52E00317944 /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		63985B7E1F9DC00C009B4B17 /* JapaneseLyricsHelper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63985B911F9DC00C009B4B17 /* Build configuration list for PBXNativeTarget "JapaneseLyricsHelper" */;
@@ -150,10 +280,12 @@
 				2278B8466AF087CD4DB2C5C3 /* [CP] Embed Pods Frameworks */,
 				16397DCBEE3EB7C68DDC3DFA /* [CP] Copy Pods Resources */,
 				6369EB4E1FA58CCF00F506B8 /* Run Script */,
+				636868251FE5B52E00317944 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				636868201FE5B52E00317944 /* PBXTargetDependency */,
 			);
 			name = JapaneseLyricsHelper;
 			productName = JapaneseLyricsHelper;
@@ -166,13 +298,26 @@
 		63985B771F9DC00C009B4B17 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0900;
 				TargetAttributes = {
+					636868191FE5B52E00317944 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
 					63985B7E1F9DC00C009B4B17 = {
 						CreatedOnToolsVersion = 9.0.1;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -189,11 +334,19 @@
 			projectRoot = "";
 			targets = (
 				63985B7E1F9DC00C009B4B17 /* JapaneseLyricsHelper */,
+				636868191FE5B52E00317944 /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		636868181FE5B52E00317944 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63985B7D1F9DC00C009B4B17 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,6 +423,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		636868161FE5B52E00317944 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6368681D1FE5B52E00317944 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63985B7B1F9DC00C009B4B17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,6 +450,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		636868201FE5B52E00317944 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 636868191FE5B52E00317944 /* NotificationService */;
+			targetProxy = 6368681F1FE5B52E00317944 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		63985B861F9DC00C009B4B17 /* Main.storyboard */ = {
@@ -312,6 +481,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		636868231FE5B52E00317944 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CMCS2KX8Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JapaneseLyricsHelper/GtSdkLib",
+				);
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = casparQian.JapaneseLyricsHelper.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NotificationService/NotificationService-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		636868241FE5B52E00317944 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CMCS2KX8Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JapaneseLyricsHelper/GtSdkLib",
+				);
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = casparQian.JapaneseLyricsHelper.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NotificationService/NotificationService-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		63985B8F1F9DC00C009B4B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -425,22 +639,25 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF22D4258B82B0AF2EDC161F /* Pods-JapaneseLyricsHelper.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = JapaneseLyricsHelper/JapaneseLyricsHelper.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3CMCS2KX8Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JapaneseLyricsHelper",
+					"$(PROJECT_DIR)/JapaneseLyricsHelper/GtSdkLib",
 				);
 				INFOPLIST_FILE = JapaneseLyricsHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = casparQian.JapaneseLyricsHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "991a2920-5c30-43f1-8761-7af67c492487";
-				PROVISIONING_PROFILE_SPECIFIER = Wild_JpLyricsHelper;
+				PROVISIONING_PROFILE = "9bf86289-5613-49d1-8f90-fc7c6e3eca48";
+				PROVISIONING_PROFILE_SPECIFIER = JPLrcHelper;
 				SWIFT_OBJC_BRIDGING_HEADER = "JapaneseLyricsHelper/JapaneseLyricsHelper-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -452,22 +669,25 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5F557865B008199E0FFE989E /* Pods-JapaneseLyricsHelper.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = JapaneseLyricsHelper/JapaneseLyricsHelper.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3CMCS2KX8Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JapaneseLyricsHelper",
+					"$(PROJECT_DIR)/JapaneseLyricsHelper/GtSdkLib",
 				);
 				INFOPLIST_FILE = JapaneseLyricsHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = casparQian.JapaneseLyricsHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "991a2920-5c30-43f1-8761-7af67c492487";
-				PROVISIONING_PROFILE_SPECIFIER = Wild_JpLyricsHelper;
+				PROVISIONING_PROFILE = "9bf86289-5613-49d1-8f90-fc7c6e3eca48";
+				PROVISIONING_PROFILE_SPECIFIER = JPLrcHelper;
 				SWIFT_OBJC_BRIDGING_HEADER = "JapaneseLyricsHelper/JapaneseLyricsHelper-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -477,6 +697,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		636868221FE5B52E00317944 /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				636868231FE5B52E00317944 /* Debug */,
+				636868241FE5B52E00317944 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		63985B7A1F9DC00C009B4B17 /* Build configuration list for PBXProject "JapaneseLyricsHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
