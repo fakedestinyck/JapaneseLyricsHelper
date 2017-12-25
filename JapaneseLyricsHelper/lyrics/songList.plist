@@ -4,6 +4,50 @@
 <array>
 	<dict>
 		<key>name</key>
+		<string>zenzenzensei</string>
+		<key>title</key>
+		<string>前前前世</string>
+		<key>language</key>
+		<array>
+			<string>jp</string>
+			<string>kana</string>
+		</array>
+		<key>hasLyrics</key>
+		<true/>
+		<key>version</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>uchiagehanabi</string>
+		<key>title</key>
+		<string>打上花火</string>
+		<key>language</key>
+		<array>
+			<string>jp</string>
+			<string>kana</string>
+		</array>
+		<key>hasLyrics</key>
+		<true/>
+		<key>version</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>byoumeiwaai</string>
+		<key>title</key>
+		<string>病名は爱だった</string>
+		<key>language</key>
+		<array>
+			<string>jp</string>
+		</array>
+		<key>hasLyrics</key>
+		<true/>
+		<key>version</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
 		<string>awaihana</string>
 		<key>title</key>
 		<string>淡い花</string>
@@ -43,7 +87,7 @@
 		<key>hasLyrics</key>
 		<true/>
 		<key>version</key>
-		<string>1</string>
+		<string>3</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -56,7 +100,37 @@
 			<string>kana</string>
 		</array>
 		<key>hasLyrics</key>
-		<false/>
+		<true/>
+		<key>version</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>hitotsuhana</string>
+		<key>title</key>
+		<string>世界に一つだけの花</string>
+		<key>language</key>
+		<array>
+			<string>jp</string>
+			<string>kana</string>
+		</array>
+		<key>hasLyrics</key>
+		<true/>
+		<key>version</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>todokanaikoi</string>
+		<key>title</key>
+		<string>届かない恋</string>
+		<key>language</key>
+		<array>
+			<string>jp</string>
+			<string>kana</string>
+		</array>
+		<key>hasLyrics</key>
+		<true/>
 		<key>version</key>
 		<string>0</string>
 	</dict>

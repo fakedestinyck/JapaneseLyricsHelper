@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>version</key>
-	<string>1</string>
 	<key>lyrics</key>
 	<array>
 		<dict>
@@ -11,6 +9,16 @@
 			<string>パッと咲いて散る花の　美しさよ　儚さよ</string>
 			<key>word</key>
 			<dict>
+				<key>11</key>
+				<array>
+					<string>美</string>
+					<string>うつく</string>
+				</array>
+				<key>16</key>
+				<array>
+					<string>儚</string>
+					<string>はかな</string>
+				</array>
 				<key>3</key>
 				<array>
 					<string>咲</string>
@@ -26,16 +34,6 @@
 					<string>花</string>
 					<string>はな</string>
 				</array>
-				<key>11</key>
-				<array>
-					<string>美</string>
-					<string>うつく</string>
-				</array>
-				<key>16</key>
-				<array>
-					<string>儚</string>
-					<string>はかな</string>
-				</array>
 			</dict>
 		</dict>
 		<dict>
@@ -48,6 +46,11 @@
 					<string>一瞬</string>
 					<string>いっしゅん</string>
 				</array>
+				<key>10</key>
+				<array>
+					<string>強</string>
+					<string>つよ</string>
+				</array>
 				<key>3</key>
 				<array>
 					<string>光</string>
@@ -57,11 +60,6 @@
 				<array>
 					<string>誰</string>
 					<string>だれ</string>
-				</array>
-				<key>10</key>
-				<array>
-					<string>強</string>
-					<string>つよ</string>
 				</array>
 			</dict>
 		</dict>
@@ -74,6 +72,11 @@
 				<array>
 					<string>愛</string>
 					<string>あい</string>
+				</array>
+				<key>10</key>
+				<array>
+					<string>星</string>
+					<string>ほし</string>
 				</array>
 				<key>3</key>
 				<array>
@@ -89,11 +92,6 @@
 				<array>
 					<string>夜空</string>
 					<string>よぞら</string>
-				</array>
-				<key>10</key>
-				<array>
-					<string>星</string>
-					<string>ほし</string>
 				</array>
 			</dict>
 		</dict>
@@ -168,18 +166,411 @@
 					<string>振</string>
 					<string>ふ</string>
 				</array>
-				<key>2</key>
-				<array>
-					<string>返</string>
-					<string>かえ</string>
-				</array>
 				<key>10</key>
 				<array>
 					<string>歩</string>
 					<string>あゆ</string>
 				</array>
+				<key>2</key>
+				<array>
+					<string>返</string>
+					<string>かえ</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>jp</key>
+			<string>カッと開いた瞳　刹那が分かつ命運</string>
+			<key>word</key>
+			<dict>
+				<key>11</key>
+				<array>
+					<string>分</string>
+					<string>わ</string>
+				</array>
+				<key>14</key>
+				<array>
+					<string>命運</string>
+					<string>めいうん</string>
+				</array>
+				<key>3</key>
+				<array>
+					<string>開</string>
+					<string>ひら</string>
+				</array>
+				<key>6</key>
+				<array>
+					<string>瞳</string>
+					<string>ひとみ</string>
+				</array>
+				<key>8</key>
+				<array>
+					<string>刹那</string>
+					<string>せつな</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>jp</key>
+			<string>真っ赤に染まる刃　誰より疾く</string>
+			<key>word</key>
+			<dict>
+				<key>0</key>
+				<array>
+					<string>真っ赤</string>
+					<string>まっか</string>
+				</array>
+				<key>12</key>
+				<array>
+					<string>疾</string>
+					<string>はや</string>
+				</array>
+				<key>4</key>
+				<array>
+					<string>染</string>
+					<string>そ</string>
+				</array>
+				<key>7</key>
+				<array>
+					<string>刃</string>
+					<string>ヤイバ</string>
+				</array>
+				<key>9</key>
+				<array>
+					<string>誰</string>
+					<string>だれ</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>jp</key>
+			<string>憧れて　追いかけて　夢はまだ　夢のまま</string>
+			<key>word</key>
+			<dict>
+				<key>0</key>
+				<array>
+					<string>憧</string>
+					<string>あこが</string>
+				</array>
+				<key>10</key>
+				<array>
+					<string>夢</string>
+					<string>ゆめ</string>
+				</array>
+				<key>15</key>
+				<array>
+					<string>夢</string>
+					<string>ゆめ</string>
+				</array>
+				<key>4</key>
+				<array>
+					<string>追</string>
+					<string>お</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>jp</key>
+			<string>響き渡る音と　街を照らす大輪</string>
+			<key>word</key>
+			<dict>
+				<key>0</key>
+				<array>
+					<string>響</string>
+					<string>ひび</string>
+				</array>
+				<key>12</key>
+				<array>
+					<string>大</string>
+					<string>たい</string>
+				</array>
+				<key>13</key>
+				<array>
+					<string>輪</string>
+					<string>りん</string>
+				</array>
+				<key>2</key>
+				<array>
+					<string>渡</string>
+					<string>わた</string>
+				</array>
+				<key>4</key>
+				<array>
+					<string>音</string>
+					<string>おと</string>
+				</array>
+				<key>7</key>
+				<array>
+					<string>街</string>
+					<string>まち</string>
+				</array>
+				<key>9</key>
+				<array>
+					<string>照</string>
+					<string>て</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>jp</key>
+			<string>束の間の平和に　過ぎ去った日を思う</string>
+			<key>word</key>
+			<dict>
+				<key>0</key>
+				<array>
+					<string>束</string>
+					<string>つか</string>
+				</array>
+				<key>10</key>
+				<array>
+					<string>去</string>
+					<string>さ</string>
+				</array>
+				<key>13</key>
+				<array>
+					<string>日</string>
+					<string>ひ</string>
+				</array>
+				<key>15</key>
+				<array>
+					<string>思</string>
+					<string>おも</string>
+				</array>
+				<key>2</key>
+				<array>
+					<string>間</string>
+					<string>ま</string>
+				</array>
+				<key>4</key>
+				<array>
+					<string>平和</string>
+					<string>へいわ</string>
+				</array>
+				<key>8</key>
+				<array>
+					<string>過</string>
+					<string>す</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>jp</key>
+			<string>立ち止まらずに　さあ　明日へ歩め</string>
+			<key>word</key>
+			<dict>
+				<key>0</key>
+				<array>
+					<string>立</string>
+					<string>た</string>
+				</array>
+				<key>11</key>
+				<array>
+					<string>明日</string>
+					<string>あす</string>
+				</array>
+				<key>14</key>
+				<array>
+					<string>歩</string>
+					<string>あゆ</string>
+				</array>
+				<key>2</key>
+				<array>
+					<string>止</string>
+					<string>ど</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>jp</key>
+			<string>キラキラ煌めく　命のかけら</string>
+			<key>word</key>
+			<dict>
+				<key>4</key>
+				<array>
+					<string>煌</string>
+					<string>きら</string>
+				</array>
+				<key>8</key>
+				<array>
+					<string>命</string>
+					<string>いのち</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>jp</key>
+			<string>メラメラ燃ゆる　心が望むまま</string>
+			<key>word</key>
+			<dict>
+				<key>10</key>
+				<array>
+					<string>望</string>
+					<string>のぞ</string>
+				</array>
+				<key>4</key>
+				<array>
+					<string>燃</string>
+					<string>も</string>
+				</array>
+				<key>8</key>
+				<array>
+					<string>心</string>
+					<string>こころ</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>jp</key>
+			<string>パッと咲いて散る花の　美しさよ　儚さよ</string>
+			<key>word</key>
+			<dict>
+				<key>11</key>
+				<array>
+					<string>美</string>
+					<string>うつく</string>
+				</array>
+				<key>16</key>
+				<array>
+					<string>儚</string>
+					<string>はかな</string>
+				</array>
+				<key>3</key>
+				<array>
+					<string>咲</string>
+					<string>さ</string>
+				</array>
+				<key>6</key>
+				<array>
+					<string>散</string>
+					<string>ち</string>
+				</array>
+				<key>8</key>
+				<array>
+					<string>花</string>
+					<string>はな</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>jp</key>
+			<string>一瞬の光なら　誰より強く</string>
+			<key>word</key>
+			<dict>
+				<key>0</key>
+				<array>
+					<string>一瞬</string>
+					<string>いっしゅん</string>
+				</array>
+				<key>10</key>
+				<array>
+					<string>強</string>
+					<string>つよ</string>
+				</array>
+				<key>3</key>
+				<array>
+					<string>光</string>
+					<string>ひかり</string>
+				</array>
+				<key>7</key>
+				<array>
+					<string>誰</string>
+					<string>だれ</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>jp</key>
+			<string>カッと開いた瞳　刹那が分かつ命運</string>
+			<key>word</key>
+			<dict>
+				<key>11</key>
+				<array>
+					<string>分</string>
+					<string>わ</string>
+				</array>
+				<key>14</key>
+				<array>
+					<string>命運</string>
+					<string>めいうん</string>
+				</array>
+				<key>3</key>
+				<array>
+					<string>開</string>
+					<string>ひら</string>
+				</array>
+				<key>6</key>
+				<array>
+					<string>瞳</string>
+					<string>ひとみ</string>
+				</array>
+				<key>8</key>
+				<array>
+					<string>刹那</string>
+					<string>せつな</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>jp</key>
+			<string>真っ赤に染まる刃　誰より疾く</string>
+			<key>word</key>
+			<dict>
+				<key>0</key>
+				<array>
+					<string>真っ赤</string>
+					<string>まっか</string>
+				</array>
+				<key>12</key>
+				<array>
+					<string>疾</string>
+					<string>はや</string>
+				</array>
+				<key>4</key>
+				<array>
+					<string>染</string>
+					<string>そ</string>
+				</array>
+				<key>7</key>
+				<array>
+					<string>刃</string>
+					<string>ヤイバ</string>
+				</array>
+				<key>9</key>
+				<array>
+					<string>誰</string>
+					<string>だれ</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>jp</key>
+			<string>憧れて　追いかけて　夢はまだ　夢のまま</string>
+			<key>word</key>
+			<dict>
+				<key>0</key>
+				<array>
+					<string>憧</string>
+					<string>あこが</string>
+				</array>
+				<key>10</key>
+				<array>
+					<string>夢</string>
+					<string>ゆめ</string>
+				</array>
+				<key>15</key>
+				<array>
+					<string>夢</string>
+					<string>ゆめ</string>
+				</array>
+				<key>4</key>
+				<array>
+					<string>追</string>
+					<string>お</string>
+				</array>
 			</dict>
 		</dict>
 	</array>
+	<key>version</key>
+	<string>3</string>
 </dict>
 </plist>

@@ -24,9 +24,9 @@ class LyricRow {
         self.lastDelta = lastDelta
         self.lyricInfo = lyricInfo
         
-        if lyricInfo.isEmpty {
-            return nil
-        }
+//        if lyricInfo.isEmpty {
+//            return nil
+//        }
     }
     
 }

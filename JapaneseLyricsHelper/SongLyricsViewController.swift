@@ -32,6 +32,13 @@ class SongLyricsViewController: UIViewController {
 
     @IBAction func refreshLrcButton(_ sender: UIBarButtonItem) {
         refreshLrcButton.isEnabled = false
+        lyricRows.removeAll()
+        lyricLabels.removeAll()
+        for view in lyricScrollView.subviews {
+            if view is UILabel {
+                view.removeFromSuperview()
+            }
+        }
         downloadLyric(songName: (song?.name)!)
     }
     
@@ -78,7 +85,17 @@ class SongLyricsViewController: UIViewController {
         // 把歌词放进LyricRow
         for eachLine in lyricArray {
             var putIntoLyricRowArray = [[String:AnyObject]]()
-            for (wordIndex, words) in ((eachLine as! [String:AnyObject])["word"] as! [String:[String]]) {
+            guard let eachLineHasWordOrNot = (eachLine as! [String:AnyObject])["word"] else {
+                // 如果没有word这一行，就插入一行空白数据
+                var tmpInfo = [String:AnyObject]()
+                tmpInfo["wordIndex"] = -1 as AnyObject
+                tmpInfo["wordArray"] = ["",""] as AnyObject
+                tmpInfo["currentDisplayLanguageIndex"] = 0 as AnyObject
+                putIntoLyricRowArray.append(tmpInfo)
+                lyricRows.append(LyricRow(lyricInfo: putIntoLyricRowArray)!)
+                continue
+            }
+            for (wordIndex, words) in (eachLineHasWordOrNot as! [String:[String]]) {
                 var tmpInfo = [String:AnyObject]()
                 tmpInfo["wordIndex"] = Int(wordIndex) as AnyObject
                 tmpInfo["wordArray"] = words as [String] as AnyObject
@@ -137,13 +154,8 @@ class SongLyricsViewController: UIViewController {
 //        for (_, word) in (lyricArray[lrcNum] as! [String:AnyObject])["kanji"] as! [String: String] {
 //            tapWords.append(word)
 //        }
-        print(tapWords)
         let lyricLabel = lyricLabels[lrcNum]
         lyricLabel.yb_addAttributeTapAction(with: tapWords) { (string, range, int) in
-//            print(string)
-//            print(range)
-//            print(int)
-//            print("----------===========----------")
             for eachWord in 0..<currentRow.lyricInfo.count {
                 let tappedIndex = range.lowerBound // 当前点击的index
                 let judgeLowerBound = (currentRow.lyricInfo[eachWord]["wordIndex"] as! Int) // 判断的数组下界

@@ -40,7 +40,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play" translatesAutoresizingMaskIntoConstraints="NO" id="xBq-9n-5RW">
-                                            <rect key="frame" x="299" y="17.333333333333332" width="50" height="50.333333333333343"/>
+                                            <rect key="frame" x="299" y="17.666666666666671" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="Aas-hd-Gan"/>
                                                 <constraint firstAttribute="height" constant="50" id="zN5-8y-nJk"/>
@@ -139,14 +139,14 @@
                                 </segments>
                             </segmentedControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjm-ul-eKk">
-                                <rect key="frame" x="0.0" y="215" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="215" width="375" height="597"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lBX-m7-fGg" firstAttribute="centerY" secondItem="50b-r4-u9e" secondAttribute="centerY" id="BXU-Cl-YWI"/>
                             <constraint firstItem="ArW-ln-ShY" firstAttribute="top" secondItem="50b-r4-u9e" secondAttribute="bottom" constant="15" id="GsT-G4-08v"/>
-                            <constraint firstItem="gh5-KF-BnS" firstAttribute="bottom" secondItem="Bjm-ul-eKk" secondAttribute="bottom" constant="10" id="NEX-K5-zuI"/>
+                            <constraint firstAttribute="bottom" secondItem="Bjm-ul-eKk" secondAttribute="bottom" id="NEX-K5-zuI"/>
                             <constraint firstItem="ArW-ln-ShY" firstAttribute="leading" secondItem="gh5-KF-BnS" secondAttribute="leading" constant="20" id="R8j-R9-qS6"/>
                             <constraint firstItem="Bjm-ul-eKk" firstAttribute="width" secondItem="gh5-KF-BnS" secondAttribute="width" id="RuP-LQ-tPz"/>
                             <constraint firstItem="Bjm-ul-eKk" firstAttribute="top" secondItem="3cP-lL-vVs" secondAttribute="bottom" constant="10" id="WYI-oa-KLs"/>
@@ -241,7 +241,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="默认显示设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eR5-zV-qIK">
-                                <rect key="frame" x="102.33333333333333" y="118.00000000000001" width="170.33333333333337" height="33.666666666666671"/>
+                                <rect key="frame" x="102.66666666666669" y="118.00000000000001" width="170" height="33.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
